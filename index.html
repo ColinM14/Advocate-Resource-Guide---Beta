@@ -131,7 +131,6 @@ header h1 {
 }
     .back-button {
       position: sticky;
-      top: 0;
       background: #fff;
       padding: 12px;
       border-bottom: 2px solid #ccc;
@@ -170,7 +169,7 @@ header h1 {
   </style>
 </head>
 <body>
-<header>
+<header id="main-header">
   <img src="https://carepatrol.com/wp-content/uploads/sites/2/2023/07/CP_CarePatrol-Logo_CMYK.svg" alt="CarePatrol Logo" />
   <h1>Advocate Resource Hub</h1>
 </header>
@@ -396,14 +395,25 @@ catDiv.appendChild(buttonGroup);
         });
     }
 
-    function showPage(id) {
-      document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('visible');
-      });
-      document.getElementById(id).classList.add('visible');
-      if (id === 'resources') loadResources();
-      if (id === 'favorites') loadFavorites();
+   function showPage(id) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('visible');
+  });
+  document.getElementById(id).classList.add('visible');
+
+
+  if (id === 'resources' || id === 'favorites') {
+    const header = document.getElementById('main-header');
+    const backButton = document.querySelector(`#${id} .back-button`);
+    
+    if (header && backButton) {
+      backButton.style.top = header.offsetHeight + 'px';
     }
+  }
+
+  if (id === 'resources') loadResources();
+  if (id === 'favorites') loadFavorites();
+}
   </script>
 </body>
 </html>
