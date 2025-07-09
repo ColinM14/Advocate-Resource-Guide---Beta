@@ -155,6 +155,18 @@ header h1 {
       flex-wrap: wrap;
       gap: 10px;
     }
+.category-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.copy-category-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
   </style>
 </head>
 <body>
@@ -243,20 +255,50 @@ header h1 {
             const catDiv = document.createElement("div");
             catDiv.className = "category";
 
-            const catLabel = document.createElement("span");
-            catLabel.textContent = cat;
+const catLabel = document.createElement("span");
+catLabel.textContent = cat;
 
-            const star = document.createElement("button");
-            star.className = "star-button";
-            star.innerHTML = isFavorite(cat) ? "★" : "☆";
-            star.addEventListener("click", (e) => {
-              e.stopPropagation();
-              toggleFavorite(cat);
-              star.innerHTML = isFavorite(cat) ? "★" : "☆";
-            });
+const buttonGroup = document.createElement('div');
+buttonGroup.className = "category-buttons";
 
-            catDiv.appendChild(catLabel);
-            catDiv.appendChild(star);
+const copyCatBtn = document.createElement("button");
+copyCatBtn.className = "copy-category-button";
+copyCatBtn.innerHTML = "📋";
+copyCatBtn.title = "Copy all resources in this category";
+
+copyCatBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  let textToCopy = `Resources for ${cat}:\n\n`;
+
+  sortedResources.forEach(resource => {
+    textToCopy += `Name: ${resource.Name}\n`;
+    if (resource.Phone && resource.Phone !== "null") textToCopy += `Phone: ${resource.Phone}\n`;
+    if (resource.Address && resource.Address !== "null") textToCopy += `Address: ${resource.Address}\n`;
+    if (resource.Website && resource.Website !== "null") textToCopy += `Website: ${resource.Website}\n`;
+    if (resource.Description && resource.Description !== "null") textToCopy += `Description: ${resource.Description}\n`;
+    textToCopy += `--------------------------------\n\n`;
+  });
+
+  navigator.clipboard.writeText(textToCopy.trim());
+  
+  alert(`Copied all resources for "${cat}"`);
+});
+
+const star = document.createElement("button");
+star.className = "star-button";
+star.innerHTML = isFavorite(cat) ? "★" : "☆";
+star.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggleFavorite(cat);
+  star.innerHTML = isFavorite(cat) ? "★" : "☆";
+});
+
+buttonGroup.appendChild(copyCatBtn);
+buttonGroup.appendChild(star);
+catDiv.appendChild(catLabel);
+catDiv.appendChild(buttonGroup);
+
 
             const wrapper = document.createElement("div");
             wrapper.className = "resources-wrapper";
