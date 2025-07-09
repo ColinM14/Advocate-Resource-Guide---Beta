@@ -308,16 +308,19 @@ catDiv.appendChild(buttonGroup);
               card.className = "resource-card";
              card.innerHTML = `
               <h3>${resource.Name}</h3>
-              ${resource.Website && resource.Website !== "null" ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : ""}
-              ${resource.Phone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : ""}
-              ${resource.Address ? `<p><strong>Address:</strong> ${resource.Address}</p>` : ""}
-              ${resource.Description ? `<p>${resource.Description}</p>` : ""}
+              
+              ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : "" }
+              
+              ${ (resource.Phone && resource.Phone !== "null") ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : "" }
+              ${ (resource.Address && resource.Address !== "null") ? `<p><strong>Address:</strong> ${resource.Address}</p>` : "" }
+              ${ (resource.Description && resource.Description !== "null") ? `<p>${resource.Description}</p>` : "" }
+              
               <div class="button-row">
-                ${resource.Phone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : ""}
-                ${resource.Website && resource.Website !== "null" ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : ""}
+                ${ (resource.Phone && resource.Phone !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : "" }
+                ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : "" }
               </div>
             `;
-              wrapper.appendChild(card);
+             wrapper.appendChild(card);
             });
 
             catDiv.addEventListener("click", () => {
@@ -367,13 +370,16 @@ catDiv.appendChild(buttonGroup);
               card.className = "resource-card";
             card.innerHTML = `
               <h3>${resource.Name}</h3>
-              ${resource.Website && resource.Website !== "null" ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : ""}
-              ${resource.Phone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : ""}
-              ${resource.Address ? `<p><strong>Address:</strong> ${resource.Address}</p>` : ""}
-              ${resource.Description ? `<p>${resource.Description}</p>` : ""}
+              
+              ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : "" }
+              
+              ${ (resource.Phone && resource.Phone !== "null") ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : "" }
+              ${ (resource.Address && resource.Address !== "null") ? `<p><strong>Address:</strong> ${resource.Address}</p>` : "" }
+              ${ (resource.Description && resource.Description !== "null") ? `<p>${resource.Description}</p>` : "" }
+              
               <div class="button-row">
-                ${resource.Phone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : ""}
-                ${resource.Website && resource.Website !== "null" ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : ""}
+                ${ (resource.Phone && resource.Phone !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : "" }
+                ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : "" }
               </div>
             `;
               wrapper.appendChild(card);
