@@ -263,15 +263,15 @@
               const card = document.createElement("div");
               card.className = "resource-card";
              card.innerHTML = `
-              <h3>${resource.Name}</h3>
-              ${resource.Website && resource.Website !== "null" ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : ""}
-              ${resource.Phone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : ""}
-              ${resource.Address ? `<p><strong>Address:</strong> ${resource.Address}</p>` : ""}
-              ${resource.Description ? `<p>${resource.Description}</p>` : ""}
-              <div class="button-row">
-                ${resource.Phone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : ""}
-              </div>
-            `;
+            <h3>${resource.Name}</h3>
+            ${resource.Website && resource.Website !== "null" ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : ""}
+            ${resource.Phone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : ""}
+            ${resource.Address ? `<p><strong>Address:</strong> ${resource.Address}</p>` : ""}
+            ${resource.Description ? `<p>${resource.Description}</p>` : ""}
+            <div class="button-row">
+              ${resource.Phone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : ""}
+            </div>
+          `;
               wrapper.appendChild(card);
             });
 
