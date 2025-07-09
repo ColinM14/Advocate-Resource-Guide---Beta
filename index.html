@@ -7,26 +7,33 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      background-image: url('bg-tile.jpg');
+      background-repeat: repeat;
     }
     header {
-      background-color: #0057a3;
-      color: white;
-      padding: 10px;
+      background-image: url('banner.jpg');
+      background-size: cover;
+      color: black;
       text-align: center;
+      padding: 40px 0 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 32px;
     }
     .nav-button {
       display: block;
+      width: 90%;
       margin: 10px auto;
-      padding: 10px 20px;
+      padding: 12px;
+      font-size: 18px;
       background-color: #0057a3;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
     }
     .category-row {
       display: flex;
@@ -44,15 +51,17 @@
     }
     .resource-button {
       display: block;
-      margin: 5px 0;
-      padding: 8px 12px;
+      width: 90%;
+      margin: 5px auto;
+      padding: 10px;
+      font-size: 14px;
       background-color: #007BFF;
       color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
-      text-decoration: none;
       text-align: center;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -67,6 +76,12 @@
 
   <section id="advocateResources" style="display: none">
     <div class="category-row" id="categoryContainer"></div>
+  </section>
+  <section id="sendResources" style="display: none">
+    <p style="text-align:center; padding: 20px;">Send Resources content coming soon.</p>
+  </section>
+  <section id="favorites" style="display: none">
+    <p style="text-align:center; padding: 20px;">Favorites feature is under maintenance.</p>
   </section>
 
   <script>
@@ -122,7 +137,7 @@
               const copyPhoneButton = document.createElement('button');
               copyPhoneButton.className = 'resource-button';
               copyPhoneButton.textContent = 'Copy Phone';
-              copyPhoneButton.onclick = () => navigator.clipboard.writeText(item.Phone);
+              copyPhoneButton.onclick = () => navigator.clipboard.writeText(`${item.Name}: ${item.Phone}`);
               info.appendChild(copyPhoneButton);
             }
 
