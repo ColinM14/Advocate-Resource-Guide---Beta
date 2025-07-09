@@ -355,11 +355,41 @@ catDiv.appendChild(buttonGroup);
 
           favs.forEach(cat => {
             if (!categories[cat]) return;
-            const catDiv = document.createElement("div");
-            catDiv.className = "category";
-            const catLabel = document.createElement("span");
-            catLabel.textContent = cat;
-            catDiv.appendChild(catLabel);
+const catDiv = document.createElement("div");
+catDiv.className = "category";
+const catLabel = document.createElement("span");
+catLabel.textContent = cat;
+
+const buttonGroup = document.createElement('div');
+buttonGroup.className = "category-buttons";
+
+const copyCatBtn = document.createElement("button");
+copyCatBtn.className = "copy-category-button";
+copyCatBtn.innerHTML = "📋";
+copyCatBtn.title = "Copy all resources in this category"; 
+
+copyCatBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  let textToCopy = `Resources for ${cat}:\n\n`;
+
+  sortedResources.forEach(resource => {
+    textToCopy += `Name: ${resource.Name}\n`;
+    if (resource.Phone && resource.Phone !== "null") textToCopy += `Phone: ${resource.Phone}\n`;
+    if (resource.Address && resource.Address !== "null") textToCopy += `Address: ${resource.Address}\n`;
+    if (resource.Website && resource.Website !== "null") textToCopy += `Website: ${resource.Website}\n`;
+    if (resource.Description && resource.Description !== "null") textToCopy += `Description: ${resource.Description}\n`;
+    textToCopy += `--------------------------------\n\n`;
+  });
+
+  navigator.clipboard.writeText(textToCopy.trim());
+
+  alert(`Copied all resources for "${cat}"`);
+});
+
+buttonGroup.appendChild(copyCatBtn);
+catDiv.appendChild(catLabel);
+catDiv.appendChild(buttonGroup);
 
             const wrapper = document.createElement("div");
             wrapper.className = "resources-wrapper";
