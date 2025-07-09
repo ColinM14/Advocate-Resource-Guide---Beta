@@ -7,6 +7,80 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('bg-tile.jpg');
+      background-repeat: repeat;
+      background-size: 300px;
+    }
+    .banner {
+      width: 100%;
+      display: block;
+    }
+    .page-title {
+      text-align: center;
+      margin-top: -20px;
+      font-size: 1.8rem;
+      color: black;
+    }
+    .home-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+      background-color: #0057a3;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px;
+    }
+    .category-wrapper {
+      width: calc(50% - 10px);
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .action-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+    .action-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .action-button, .nav-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px;
+      background: #0057a3;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-button {
+      width: 90%;
+      padding: 15px;
+      font-size: 1.2rem;
+      margin: 10px auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -50,73 +124,6 @@
     </section>
   </main>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('bg-tile.jpg');
-      background-repeat: repeat;
-      background-size: 300px;
-    }
-    .banner {
-      width: 100%;
-      display: block;
-    }
-    .page-title {
-      text-align: center;
-      margin-top: -20px;
-      font-size: 1.8rem;
-      color: black;
-    }
-    .home-button {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 1000;
-    }
-    .category-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 10px;
-    }
-    .category-wrapper {
-      width: calc(50% - 10px);
-      background: #fff;
-      padding: 10px;
-      border-radius: 10px;
-    }
-    .action-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-    }
-    .action-card {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .action-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px;
-      background: #0057a3;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .nav-button {
-      width: 90%;
-      padding: 15px;
-      font-size: 1.2rem;
-      margin: 10px auto;
-      display: block;
-    }
-  </style>
-
   <script>
     function goHome() {
       document.querySelectorAll('.page-section').forEach(sec => sec.style.display = 'none');
@@ -159,6 +166,7 @@
               <p>${item.Address || ''}</p>
               <p>${item.Phone || ''}</p>
               ${item.Website ? `<a href="${item.Website}" target="_blank" class="action-button">Visit Website</a>` : ''}
+              ${item.Website ? `<button class="action-button" onclick="navigator.clipboard.writeText('${item.Website}')">Copy Website</button>` : ''}
               ${item.Phone ? `<button class="action-button" onclick="navigator.clipboard.writeText('${item.Phone}')">Copy Phone</button>` : ''}
             </div>
           `).join('');
@@ -171,4 +179,3 @@
   </script>
 </body>
 </html>
-
