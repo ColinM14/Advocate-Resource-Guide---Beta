@@ -166,6 +166,27 @@ header h1 {
   cursor: pointer;
   color: white;
 }
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #009ca7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -177,9 +198,10 @@ header h1 {
   <div class="home-buttons">
     <button onclick="showPage('resources')">Advocate Resources</button>
     <button onclick="showPage('send')">Send Resources</button>
-    <button onclick="showPage('forms')">Forms</button> 
+    <button onclick="showPage('forms')">Share Forms</button> 
     <button onclick="showPage('disclosures')">Disclosures</button>
     <button onclick="showPage('favorites')">⭐ My Favorites</button>
+    <button onclick="showPage('search')">Search</button>
   </div>
 </div>
 
@@ -279,11 +301,56 @@ header h1 {
     <p>Loading favorites...</p>
   </div>
 </div>
-  <script>
+  <div id="search" class="page">
+  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
+  
+  <div class="card">
+    <h3>Search Resources</h3>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by name, category, etc...">
+      <button id="searchButton">Search</button>
+    </div>
+  </div>
+
+  <div id="searchResults"></div>
+</div>
+<script>
+  let allResources = []; 
+  fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+      allResources = data;
+      console.log("Resources loaded and ready.");
+    });
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
     }
+function createResourceCard(resource) {
+  const card = document.createElement("div");
+  card.className = "resource-card";
 
+  const hasWebsite = resource.Website && resource.Website.trim() && resource.Website !== "null";
+  const hasPhone = resource.Phone && resource.Phone !== "null";
+  const hasAddress = resource.Address && resource.Address !== "null";
+  const hasDescription = resource.Description && resource.Description !== "null";
+
+  card.innerHTML = `
+    <h3>${resource.Name}</h3>
+    
+    ${ hasWebsite ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : "" }
+    
+    ${ hasPhone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : "" }
+    ${ hasAddress ? `<p><strong>Address:</strong> ${resource.Address}</p>` : "" }
+    ${ hasDescription ? `<p>${resource.Description}</p>` : "" }
+    
+    <div class="button-row">
+      ${ hasPhone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : "" }
+      ${ hasWebsite ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : "" }
+    </div>
+  `;
+  
+  return card;
+}
     function getFavorites() {
       return JSON.parse(localStorage.getItem("favorites") || "[]");
     }
@@ -306,7 +373,6 @@ header h1 {
       const container = document.getElementById("resourceContent");
       if (container.dataset.loaded) return;
       container.dataset.loaded = true;
-      fetch("data.json")
         .then(res => res.json())
         .then(data => {
           const categories = {};
@@ -376,25 +442,14 @@ catDiv.appendChild(buttonGroup);
             wrapper.className = "resources-wrapper";
 
             const sortedResources = categories[cat].sort((a, b) => a.Name.localeCompare(b.Name));
-            sortedResources.forEach(resource => {
-              const card = document.createElement("div");
-              card.className = "resource-card";
-             card.innerHTML = `
-              <h3>${resource.Name}</h3>
-              
-              ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : "" }
-              
-              ${ (resource.Phone && resource.Phone !== "null") ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : "" }
-              ${ (resource.Address && resource.Address !== "null") ? `<p><strong>Address:</strong> ${resource.Address}</p>` : "" }
-              ${ (resource.Description && resource.Description !== "null") ? `<p>${resource.Description}</p>` : "" }
-              
-              <div class="button-row">
-                ${ (resource.Phone && resource.Phone !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : "" }
-                ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : "" }
-              </div>
-            `;
-             wrapper.appendChild(card);
-            });
+const sortedResources = allResources
+  .filter(item => item.Category === cat)
+  .sort((a, b) => a.Name.localeCompare(b.Name));
+
+sortedResources.forEach(resource => {
+  const cardElement = createResourceCard(resource);
+  wrapper.appendChild(cardElement);
+});
 
             catDiv.addEventListener("click", () => {
               const isOpen = wrapper.style.display === "block";
@@ -416,7 +471,6 @@ catDiv.appendChild(buttonGroup);
     function loadFavorites() {
       const container = document.getElementById("favoritesContent");
       container.innerHTML = "";
-      fetch("data.json")
         .then(res => res.json())
         .then(data => {
           const favs = getFavorites();
@@ -446,48 +500,15 @@ copyCatBtn.addEventListener("click", (e) => {
 
   let textToCopy = `Resources for ${cat}:\n\n`;
 
-  sortedResources.forEach(resource => {
-    textToCopy += `Name: ${resource.Name}\n`;
-    if (resource.Phone && resource.Phone !== "null") textToCopy += `Phone: ${resource.Phone}\n`;
-    if (resource.Address && resource.Address !== "null") textToCopy += `Address: ${resource.Address}\n`;
-    if (resource.Website && resource.Website !== "null") textToCopy += `Website: ${resource.Website}\n`;
-    if (resource.Description && resource.Description !== "null") textToCopy += `Description: ${resource.Description}\n`;
-    textToCopy += `--------------------------------\n\n`;
-  });
+// --- REPLACE WITH THIS CODE ---
+const sortedResources = allResources
+  .filter(item => item.Category === cat)
+  .sort((a, b) => a.Name.localeCompare(b.Name));
 
-  navigator.clipboard.writeText(textToCopy.trim());
-
-  alert(`Copied all resources for "${cat}"`);
+sortedResources.forEach(resource => {
+  const cardElement = createResourceCard(resource);
+  wrapper.appendChild(cardElement);
 });
-
-buttonGroup.appendChild(copyCatBtn);
-catDiv.appendChild(catLabel);
-catDiv.appendChild(buttonGroup);
-
-            const wrapper = document.createElement("div");
-            wrapper.className = "resources-wrapper";
-
-            const sortedResources = categories[cat].sort((a, b) => a.Name.localeCompare(b.Name));
-            sortedResources.forEach(resource => {
-              const card = document.createElement("div");
-              card.className = "resource-card";
-            card.innerHTML = `
-              <h3>${resource.Name}</h3>
-              
-              ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : "" }
-              
-              ${ (resource.Phone && resource.Phone !== "null") ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : "" }
-              ${ (resource.Address && resource.Address !== "null") ? `<p><strong>Address:</strong> ${resource.Address}</p>` : "" }
-              ${ (resource.Description && resource.Description !== "null") ? `<p>${resource.Description}</p>` : "" }
-              
-              <div class="button-row">
-                ${ (resource.Phone && resource.Phone !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : "" }
-                ${ (resource.Website && resource.Website.trim() && resource.Website !== "null") ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : "" }
-              </div>
-            `;
-              wrapper.appendChild(card);
-            });
-
             catDiv.addEventListener("click", () => {
               const isOpen = wrapper.style.display === "block";
               document.querySelectorAll(".resources-wrapper").forEach(w => w.style.display = "none");
