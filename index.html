@@ -288,7 +288,7 @@ header h1 {
   </div>
   <div class="card">
     <h3>Printable Disclosure</h3>
-    <div class="button-_row">
+    <div class="button-row">
       <a href="https://drive.google.com/file/d/1xD2xDR2aPBLL2Kg2rBGdNnzZcaQBZKHf/view?usp=sharing" target="_blank" class="action-button">Visit Link</a>
       <button class="copy-button" onclick="copyText('https://drive.google.com/file/d/1xD2xDR2aPBLL2Kg2rBGdNnzZcaQBZKHf/view?usp=sharing')">Copy Link</button>
     </div>
@@ -315,279 +315,254 @@ header h1 {
   <div id="searchResults"></div>
 </div>
 <script>
-  let allResources = []; 
+  let allResources = [];
+
+  // Fetch data as soon as the page loads and store it
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       allResources = data;
       console.log("Resources loaded and ready.");
-    });
-document.addEventListener('DOMContentLoaded', () => {
-  const searchButton = document.getElementById('searchButton');
-  const searchInput = document.getElementById('searchInput');
-  if (searchButton) {
-    searchButton.addEventListener('click', performSearch);
-  }
-  if (searchInput) {
-    searchInput.addEventListener('keyup', (event) => {
-      if (event.key === 'Enter') {
-        performSearch();
-      }
-    });
-  }
-});
-    function copyText(text) {
-      navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
+    })
+    .catch(error => console.error("Error fetching data:", error));
+
+  // Add event listeners once the document is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+
+    if (searchButton) {
+      searchButton.addEventListener('click', performSearch);
     }
-function createResourceCard(resource) {
-  const card = document.createElement("div");
-  card.className = "resource-card";
-
-  const hasWebsite = resource.Website && resource.Website.trim() && resource.Website !== "null";
-  const hasPhone = resource.Phone && resource.Phone !== "null";
-  const hasAddress = resource.Address && resource.Address !== "null";
-  const hasDescription = resource.Description && resource.Description !== "null";
-
-  card.innerHTML = `
-    <h3>${resource.Name}</h3>
-    
-    ${ hasWebsite ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : "" }
-    
-    ${ hasPhone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : "" }
-    ${ hasAddress ? `<p><strong>Address:</strong> ${resource.Address}</p>` : "" }
-    ${ hasDescription ? `<p>${resource.Description}</p>` : "" }
-    
-    <div class="button-row">
-      ${ hasPhone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : "" }
-      ${ hasWebsite ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : "" }
-    </div>
-  `;
-  
-  return card;
-}
-function performSearch() {
-  const searchInput = document.getElementById('searchInput');
-  const resultsContainer = document.getElementById('searchResults');
-  
-  const searchTerm = searchInput.value.toLowerCase().trim();
-
-  resultsContainer.innerHTML = '';
-
-  if (!searchTerm) {
-    return;
-  }
-
-  const searchResults = allResources.filter(resource => {
-    // Check if the search term is in the Name, Description, or Category
-    const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
-    const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
-    const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
-
-    return nameMatch || descMatch || catMatch;
+    if (searchInput) {
+      searchInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+          performSearch();
+        }
+      });
+    }
   });
 
-  if (searchResults.length > 0) {
-    searchResults.forEach(resource => {
-      const cardElement = createResourceCard(resource);
-      resultsContainer.appendChild(cardElement);
-    });
-  } else {
-    resultsContainer.innerHTML = '<p style="text-align: center; margin-top: 20px;">No results found.</p>';
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
   }
-}
-    function getFavorites() {
-      return JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  function createResourceCard(resource) {
+    const card = document.createElement("div");
+    card.className = "resource-card";
+    const hasWebsite = resource.Website && resource.Website.trim() && resource.Website !== "null";
+    const hasPhone = resource.Phone && resource.Phone !== "null";
+    const hasAddress = resource.Address && resource.Address !== "null";
+    const hasDescription = resource.Description && resource.Description !== "null";
+    card.innerHTML = `
+      <h3>${resource.Name}</h3>
+      ${hasWebsite ? `<a class="website-button" href="${resource.Website}" target="_blank">Visit Website</a>` : ""}
+      ${hasPhone ? `<p><strong>Phone:</strong> ${resource.Phone}</p>` : ""}
+      ${hasAddress ? `<p><strong>Address:</strong> ${resource.Address}</p>` : ""}
+      ${hasDescription ? `<p>${resource.Description}</p>` : ""}
+      <div class="button-row">
+        ${hasPhone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : ""}
+        ${hasWebsite ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : ""}
+      </div>
+    `;
+    return card;
+  }
+
+  function performSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const resultsContainer = document.getElementById('searchResults');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    resultsContainer.innerHTML = '';
+    if (!searchTerm) {
+      return;
     }
-
-    function isFavorite(cat) {
-      return getFavorites().includes(cat);
+    const searchResults = allResources.filter(resource => {
+      const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
+      const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
+      const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
+      return nameMatch || descMatch || catMatch;
+    });
+    if (searchResults.length > 0) {
+      searchResults.forEach(resource => {
+        const cardElement = createResourceCard(resource);
+        resultsContainer.appendChild(cardElement);
+      });
+    } else {
+      resultsContainer.innerHTML = '<p style="text-align: center; margin-top: 20px;">No results found.</p>';
     }
+  }
 
-    function toggleFavorite(cat) {
-      let favs = getFavorites();
-      if (favs.includes(cat)) {
-        favs = favs.filter(c => c !== cat);
-      } else {
-        favs.push(cat);
-      }
-      localStorage.setItem("favorites", JSON.stringify(favs));
+  function getFavorites() {
+    return JSON.parse(localStorage.getItem("favorites") || "[]");
+  }
+
+  function isFavorite(cat) {
+    return getFavorites().includes(cat);
+  }
+
+  function toggleFavorite(cat) {
+    let favs = getFavorites();
+    if (favs.includes(cat)) {
+      favs = favs.filter(c => c !== cat);
+    } else {
+      favs.push(cat);
     }
+    localStorage.setItem("favorites", JSON.stringify(favs));
+  }
 
-    function loadResources() {
-      const container = document.getElementById("resourceContent");
-      if (container.dataset.loaded) return;
-      container.dataset.loaded = true;
-        .then(res => res.json())
-        .then(data => {
-          const categories = {};
-          data.forEach(item => {
-            if (!categories[item.Category]) categories[item.Category] = [];
-            categories[item.Category].push(item);
-          });
+  function loadResources() {
+    const container = document.getElementById("resourceContent");
+    if (container.dataset.loaded) return;
+    container.dataset.loaded = true;
+    container.innerHTML = ''; // Clear previous content
 
-          const sortedCats = Object.keys(categories).sort();
-          const row = document.createElement("div");
-          row.className = "category-row";
-          container.appendChild(row);
-
-          sortedCats.forEach(cat => {
-            const block = document.createElement("div");
-            block.className = "category-block";
-
-            const catDiv = document.createElement("div");
-            catDiv.className = "category";
-
-const catLabel = document.createElement("span");
-catLabel.textContent = cat;
-
-const buttonGroup = document.createElement('div');
-buttonGroup.className = "category-buttons";
-
-const copyCatBtn = document.createElement("button");
-copyCatBtn.className = "copy-category-button";
-copyCatBtn.innerHTML = "📋";
-copyCatBtn.title = "Copy all resources in this category";
-
-copyCatBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  let textToCopy = `Resources for ${cat}:\n\n`;
-
-  sortedResources.forEach(resource => {
-    textToCopy += `Name: ${resource.Name}\n`;
-    if (resource.Phone && resource.Phone !== "null") textToCopy += `Phone: ${resource.Phone}\n`;
-    if (resource.Address && resource.Address !== "null") textToCopy += `Address: ${resource.Address}\n`;
-    if (resource.Website && resource.Website !== "null") textToCopy += `Website: ${resource.Website}\n`;
-    if (resource.Description && resource.Description !== "null") textToCopy += `Description: ${resource.Description}\n`;
-    textToCopy += `--------------------------------\n\n`;
-  });
-
-  navigator.clipboard.writeText(textToCopy.trim());
-  
-  alert(`Copied all resources for "${cat}"`);
-});
-
-const star = document.createElement("button");
-star.className = "star-button";
-star.innerHTML = isFavorite(cat) ? "★" : "☆";
-star.addEventListener("click", (e) => {
-  e.stopPropagation();
-  toggleFavorite(cat);
-  star.innerHTML = isFavorite(cat) ? "★" : "☆";
-});
-
-buttonGroup.appendChild(copyCatBtn);
-buttonGroup.appendChild(star);
-catDiv.appendChild(catLabel);
-catDiv.appendChild(buttonGroup);
-
-
-            const wrapper = document.createElement("div");
-            wrapper.className = "resources-wrapper";
-
-            const sortedResources = categories[cat].sort((a, b) => a.Name.localeCompare(b.Name));
-const sortedResources = allResources
-  .filter(item => item.Category === cat)
-  .sort((a, b) => a.Name.localeCompare(b.Name));
-
-sortedResources.forEach(resource => {
-  const cardElement = createResourceCard(resource);
-  wrapper.appendChild(cardElement);
-});
-
-            catDiv.addEventListener("click", () => {
-              const isOpen = wrapper.style.display === "block";
-              document.querySelectorAll(".resources-wrapper").forEach(w => w.style.display = "none");
-              document.querySelectorAll(".category").forEach(c => c.classList.remove("active"));
-              if (!isOpen) {
-                wrapper.style.display = "block";
-                catDiv.classList.add("active");
-              }
-            });
-
-            block.appendChild(catDiv);
-            block.appendChild(wrapper);
-            row.appendChild(block);
-          });
+    const categories = [...new Set(allResources.map(item => item.Category))].sort();
+    const row = document.createElement("div");
+    row.className = "category-row";
+    
+    categories.forEach(cat => {
+      const block = document.createElement("div");
+      block.className = "category-block";
+      const catDiv = document.createElement("div");
+      catDiv.className = "category";
+      const catLabel = document.createElement("span");
+      catLabel.textContent = cat;
+      const buttonGroup = document.createElement('div');
+      buttonGroup.className = "category-buttons";
+      const copyCatBtn = document.createElement("button");
+      copyCatBtn.className = "copy-category-button";
+      copyCatBtn.innerHTML = "📋";
+      copyCatBtn.title = "Copy all resources in this category";
+      const sortedResources = allResources.filter(item => item.Category === cat);
+      copyCatBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        let textToCopy = `Resources for ${cat}:\n\n`;
+        sortedResources.forEach(resource => {
+          textToCopy += `Name: ${resource.Name}\n`;
+          if (resource.Phone && resource.Phone !== "null") textToCopy += `Phone: ${resource.Phone}\n`;
+          if (resource.Address && resource.Address !== "null") textToCopy += `Address: ${resource.Address}\n`;
+          if (resource.Website && resource.Website !== "null") textToCopy += `Website: ${resource.Website}\n`;
+          if (resource.Description && resource.Description !== "null") textToCopy += `Description: ${resource.Description}\n`;
+          textToCopy += `--------------------------------\n\n`;
         });
-    }
-
-    function loadFavorites() {
-      const container = document.getElementById("favoritesContent");
-      container.innerHTML = "";
-        .then(res => res.json())
-        .then(data => {
-          const favs = getFavorites();
-          const categories = {};
-          data.forEach(item => {
-            if (!categories[item.Category]) categories[item.Category] = [];
-            categories[item.Category].push(item);
-          });
-
-          favs.forEach(cat => {
-            if (!categories[cat]) return;
-const catDiv = document.createElement("div");
-catDiv.className = "category";
-const catLabel = document.createElement("span");
-catLabel.textContent = cat;
-
-const buttonGroup = document.createElement('div');
-buttonGroup.className = "category-buttons";
-
-const copyCatBtn = document.createElement("button");
-copyCatBtn.className = "copy-category-button";
-copyCatBtn.innerHTML = "📋";
-copyCatBtn.title = "Copy all resources in this category"; 
-
-copyCatBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  let textToCopy = `Resources for ${cat}:\n\n`;
-
-// --- REPLACE WITH THIS CODE ---
-const sortedResources = allResources
-  .filter(item => item.Category === cat)
-  .sort((a, b) => a.Name.localeCompare(b.Name));
-
-sortedResources.forEach(resource => {
-  const cardElement = createResourceCard(resource);
-  wrapper.appendChild(cardElement);
-});
-            catDiv.addEventListener("click", () => {
-              const isOpen = wrapper.style.display === "block";
-              document.querySelectorAll(".resources-wrapper").forEach(w => w.style.display = "none");
-              document.querySelectorAll(".category").forEach(c => c.classList.remove("active"));
-              if (!isOpen) {
-                wrapper.style.display = "block";
-                catDiv.classList.add("active");
-              }
-            });
-
-            container.appendChild(catDiv);
-            container.appendChild(wrapper);
-          });
+        navigator.clipboard.writeText(textToCopy.trim());
+        alert(`Copied all resources for "${cat}"`);
+      });
+      const star = document.createElement("button");
+      star.className = "star-button";
+      star.innerHTML = isFavorite(cat) ? "★" : "☆";
+      star.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleFavorite(cat);
+        star.innerHTML = isFavorite(cat) ? "★" : "☆";
+      });
+      buttonGroup.appendChild(copyCatBtn);
+      buttonGroup.appendChild(star);
+      catDiv.appendChild(catLabel);
+      catDiv.appendChild(buttonGroup);
+      const wrapper = document.createElement("div");
+      wrapper.className = "resources-wrapper";
+      sortedResources
+        .sort((a, b) => a.Name.localeCompare(b.Name))
+        .forEach(resource => {
+          const cardElement = createResourceCard(resource);
+          wrapper.appendChild(cardElement);
         });
-    }
-
-   function showPage(id) {
-  document.querySelectorAll('.page').forEach(page => {
-    page.classList.remove('visible');
-  });
-  document.getElementById(id).classList.add('visible');
-
-
-  if (id === 'resources' || id === 'favorites') {
-    const header = document.getElementById('main-header');
-    const backButton = document.querySelector(`#${id} .back-button`);
-    
-    if (header && backButton) {
-      backButton.style.top = header.offsetHeight + 'px';
-    }
+      catDiv.addEventListener("click", () => {
+        const isOpen = wrapper.style.display === "block";
+        document.querySelectorAll(".resources-wrapper").forEach(w => w.style.display = "none");
+        document.querySelectorAll(".category").forEach(c => c.classList.remove("active"));
+        if (!isOpen) {
+          wrapper.style.display = "block";
+          catDiv.classList.add("active");
+        }
+      });
+      block.appendChild(catDiv);
+      block.appendChild(wrapper);
+      row.appendChild(block);
+    });
+    container.appendChild(row);
   }
 
-  if (id === 'resources') loadResources();
-  if (id === 'favorites') loadFavorites();
-}
-  </script>
+  function loadFavorites() {
+    const container = document.getElementById("favoritesContent");
+    container.innerHTML = "";
+    const favs = getFavorites();
+
+    if (favs.length === 0) {
+        container.innerHTML = '<p style="text-align: center; margin-top: 20px;">You have no favorite categories yet.</p>';
+        return;
+    }
+
+    favs.forEach(cat => {
+      const catDiv = document.createElement("div");
+      catDiv.className = "category";
+      const catLabel = document.createElement("span");
+      catLabel.textContent = cat;
+      const buttonGroup = document.createElement('div');
+      buttonGroup.className = "category-buttons";
+      const copyCatBtn = document.createElement("button");
+      copyCatBtn.className = "copy-category-button";
+      copyCatBtn.innerHTML = "📋";
+      copyCatBtn.title = "Copy all resources in this category";
+      const sortedResources = allResources.filter(item => item.Category === cat);
+      copyCatBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        let textToCopy = `Resources for ${cat}:\n\n`;
+        sortedResources.forEach(resource => {
+          textToCopy += `Name: ${resource.Name}\n`;
+          if (resource.Phone && resource.Phone !== "null") textToCopy += `Phone: ${resource.Phone}\n`;
+          if (resource.Address && resource.Address !== "null") textToCopy += `Address: ${resource.Address}\n`;
+          if (resource.Website && resource.Website !== "null") textToCopy += `Website: ${resource.Website}\n`;
+          if (resource.Description && resource.Description !== "null") textToCopy += `Description: ${resource.Description}\n`;
+          textToCopy += `--------------------------------\n\n`;
+        });
+        navigator.clipboard.writeText(textToCopy.trim());
+        alert(`Copied all resources for "${cat}"`);
+      });
+      buttonGroup.appendChild(copyCatBtn);
+      catDiv.appendChild(catLabel);
+      catDiv.appendChild(buttonGroup);
+      const wrapper = document.createElement("div");
+      wrapper.className = "resources-wrapper";
+      sortedResources
+        .sort((a, b) => a.Name.localeCompare(b.Name))
+        .forEach(resource => {
+          const cardElement = createResourceCard(resource);
+          wrapper.appendChild(cardElement);
+        });
+      catDiv.addEventListener("click", () => {
+        const isOpen = wrapper.style.display === "block";
+        document.querySelectorAll("#favoritesContent .resources-wrapper").forEach(w => w.style.display = "none");
+        document.querySelectorAll("#favoritesContent .category").forEach(c => c.classList.remove("active"));
+        if (!isOpen) {
+          wrapper.style.display = "block";
+          catDiv.classList.add("active");
+        }
+      });
+      container.appendChild(catDiv);
+      container.appendChild(wrapper);
+    });
+  }
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('visible');
+    });
+    document.getElementById(id).classList.add('visible');
+    
+    const pagesWithBackButton = ['resources', 'favorites', 'send', 'disclosures', 'forms', 'search'];
+    if (pagesWithBackButton.includes(id)) {
+      const header = document.getElementById('main-header');
+      const backButton = document.querySelector(`#${id} .back-button`);
+      if (header && backButton) {
+        backButton.style.top = header.offsetHeight + 'px';
+      }
+    }
+
+    if (id === 'resources') loadResources();
+    if (id === 'favorites') loadFavorites();
+  }
+</script>
 </body>
 </html>
