@@ -322,6 +322,23 @@ header h1 {
       allResources = data;
       console.log("Resources loaded and ready.");
     });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchButton = document.getElementById('searchButton');
+  const searchInput = document.getElementById('searchInput');
+
+  if (searchButton) {
+    searchButton.addEventListener('click', performSearch);
+  }
+  
+  if (searchInput) {
+    searchInput.addEventListener('keyup', (event) => {
+      if (event.key === 'Enter') {
+        performSearch();
+      }
+    });
+  }
+});
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
     }
@@ -350,6 +367,32 @@ function createResourceCard(resource) {
   `;
   
   return card;
+}
+function performSearch() {
+  const searchInput = document.getElementById('searchInput');
+  const resultsContainer = document.getElementById('searchResults');
+  const searchTerm = searchInput.value.toLowerCase().trim();
+
+  resultsContainer.innerHTML = '';
+  if (!searchTerm) {
+    return;
+  }
+  const searchResults = allResources.filter(resource => {
+    const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
+    const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
+    const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
+
+    return nameMatch || descMatch || catMatch;
+  });
+
+  if (searchResults.length > 0) {
+    searchResults.forEach(resource => {
+      const cardElement = createResourceCard(resource);
+      resultsContainer.appendChild(cardElement);
+    });
+  } else {
+    resultsContainer.innerHTML = '<p style="text-align: center; margin-top: 20px;">No results found.</p>';
+  }
 }
     function getFavorites() {
       return JSON.parse(localStorage.getItem("favorites") || "[]");
