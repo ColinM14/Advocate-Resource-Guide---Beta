@@ -322,15 +322,12 @@ header h1 {
       allResources = data;
       console.log("Resources loaded and ready.");
     });
-
 document.addEventListener('DOMContentLoaded', () => {
   const searchButton = document.getElementById('searchButton');
   const searchInput = document.getElementById('searchInput');
-
   if (searchButton) {
     searchButton.addEventListener('click', performSearch);
   }
-  
   if (searchInput) {
     searchInput.addEventListener('keyup', (event) => {
       if (event.key === 'Enter') {
@@ -371,13 +368,17 @@ function createResourceCard(resource) {
 function performSearch() {
   const searchInput = document.getElementById('searchInput');
   const resultsContainer = document.getElementById('searchResults');
+  
   const searchTerm = searchInput.value.toLowerCase().trim();
 
   resultsContainer.innerHTML = '';
+
   if (!searchTerm) {
     return;
   }
+
   const searchResults = allResources.filter(resource => {
+    // Check if the search term is in the Name, Description, or Category
     const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
     const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
     const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
