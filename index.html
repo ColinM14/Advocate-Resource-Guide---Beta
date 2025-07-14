@@ -98,6 +98,15 @@ header h1 {
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       margin-top: 10px;
     }
+        .search-result-category {
+      font-size: 16px;
+      color: #555;
+      margin-top: 25px;
+      margin-bottom: -5px; /* Pulls the card up slightly closer */
+      padding-left: 10px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
     .copy-button {
       background: #66b1e2;
       color: white;
@@ -382,11 +391,15 @@ header h1 {
       const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
       return nameMatch || descMatch || catMatch;
     });
-    if (searchResults.length > 0) {
-      searchResults.forEach(resource => {
-        const cardElement = createResourceCard(resource);
-        resultsContainer.appendChild(cardElement);
-      });
+      if (searchResults.length > 0) {
+  searchResults.forEach(resource => {
+    const categoryHeader = document.createElement("h4");
+    categoryHeader.className = "search-result-category";
+    categoryHeader.textContent = `Category: ${resource.Category}`;
+    const cardElement = createResourceCard(resource);
+    resultsContainer.appendChild(categoryHeader);
+    resultsContainer.appendChild(cardElement);
+});
     } else {
       resultsContainer.innerHTML = '<p style="text-align: center; margin-top: 20px;">No results found.</p>';
     }
