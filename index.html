@@ -296,6 +296,7 @@ header h1 {
     <p>Loading favorites...</p>
   </div>
 </div>
+  
 <div id="search" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
 
@@ -309,10 +310,10 @@ header h1 {
 
   <div id="searchResults"></div>
 </div>
+  
 <script>
   let allResources = [];
 
-  // Fetch data as soon as the page loads and store it
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
@@ -321,7 +322,6 @@ header h1 {
     })
     .catch(error => console.error("Error fetching data:", error));
 
-  // Add event listeners once the document is ready
   document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
@@ -565,10 +565,6 @@ function showPage(id) {
   if (id === 'favorites') loadFavorites();
 }
 
-  if (id === 'resources') loadResources();
-  if (id === 'favorites') loadFavorites();
-}
-  
 </script>
 </body>
 </html>
