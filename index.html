@@ -204,13 +204,13 @@ header h1 {
   <h1>Advocate Resource Hub</h1>
 </header>
 <div id="home" class="page visible">
-  <div class="home-buttons">
-    <button onclick="showPage('resources')">Advocate Resources</button>
-    <button onclick="showPage('forms')">Share Forms</button> 
-    <button onclick="showPage('disclosures')">Disclosures</button>
-    <button onclick="showPage('favorites')">⭐ My Favorites</button>
-    <button onclick="showPage('Google')">Share Google Link</button>
-    <button onclick="showPage('search')">Search</button>
+ <div class="home-buttons">
+  <button onclick="showPage('resources')">Advocate Resources</button>
+  <button onclick="showPage('forms')">Forms</button> 
+  <button onclick="showPage('disclosures')">Disclosures</button>
+  <button onclick="showPage('search')">Search</button>
+  <button onclick="showPage('favorites')">⭐ My Favorites</button>
+  <button onclick="copyText('Your feedback means a lot! Leave us a quick Google review here: https://g.page/r/CVXT-a832BjDEAE/review')">Share Google Link</button>
   </div>
 </div>
 
@@ -298,16 +298,6 @@ header h1 {
 </div>
   <div id="search" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-
-    
-<div id="Google" class="page">
-  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div class="card">
-    <h3>Google Review Link</h3>
-    <p>Send Google Review Link and review Request</p>
-   <div class="button-row">
-<button class="copy-button" onclick="copyText('Your feedback means a lot! Leave us a quick Google review here: https://g.page/r/CVXT-a832BjDEAE/review')">Copy Message</button>
-  </div>
 </div>
   
   <div class="card">
@@ -555,23 +545,26 @@ header h1 {
     });
   }
 
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(page => {
-      page.classList.remove('visible');
-    });
-    document.getElementById(id).classList.add('visible');
-    
-    const pagesWithBackButton = ['resources', 'favorites', 'send', 'disclosures', 'forms', 'search'];
-    if (pagesWithBackButton.includes(id)) {
-      const header = document.getElementById('main-header');
-      const backButton = document.querySelector(`#${id} .back-button`);
-      if (header && backButton) {
-        backButton.style.top = header.offsetHeight + 'px';
-      }
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('visible');
+  });
+  document.getElementById(id).classList.add('visible');
+  
+  // 'send' has been removed from this list
+  const pagesWithBackButton = ['resources', 'favorites', 'disclosures', 'forms', 'search'];
+  
+  if (pagesWithBackButton.includes(id)) {
+    const header = document.getElementById('main-header');
+    const backButton = document.querySelector(`#${id} .back-button`);
+    if (header && backButton) {
+      backButton.style.top = header.offsetHeight + 'px';
     }
+  }
 
-    if (id === 'resources') loadResources();
-    if (id === 'favorites') loadFavorites();
+  if (id === 'resources') loadResources();
+  if (id === 'favorites') loadFavorites();
+}
   }
 </script>
 </body>
