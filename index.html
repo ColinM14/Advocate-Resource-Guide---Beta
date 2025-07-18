@@ -210,6 +210,27 @@ header h1 {
   width: 18px;
   height: 18px;
 }
+    .copy-forms-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+.copy-forms-container button {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #715191;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -346,7 +367,9 @@ header h1 {
     </div>
   </div>
   
-  <button id="copySelectedForms" class="home-buttons button">Copy Selected Links</button>
+<div class="copy-forms-container">
+  <button id="copySelectedForms">Copy Selected Links</button>
+</div>
 
 </div>
   
@@ -436,31 +459,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const copyFormsButton = document.getElementById('copySelectedForms');
-  if (copyFormsButton) {
-    copyFormsButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
-      
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more forms to copy.");
-        return;
-      }
+// Find the 'copyFormsButton' listener inside your DOMContentLoaded block and replace it with this
 
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+const copyFormsButton = document.getElementById('copySelectedForms');
+if (copyFormsButton) {
+  copyFormsButton.addEventListener('click', () => {
+    // Find all checkboxes on the page that are currently checked
+    const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
+    
+    if (checkedBoxes.length === 0) {
+      alert("Please select one or more forms to copy.");
+      return;
+    }
 
-      const textToCopy = links.join('\n');
+    // Extract the link from each checkbox's data-link attribute
+    const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+    const textToShare = "Here are the links you requested:\n" + links.join('\n');
 
-      navigator.clipboard.writeText(textToCopy).then(() => {
+    // Check if the browser supports the modern Web Share API
+    if (navigator.share) {
+      navigator.share({
+        title: 'Shared Form Links',
+        text: textToShare,
+      })
+      .then(() => {
+        console.log('Successful share');
+        // --- ADD THIS LINE ---
+        checkedBoxes.forEach(box => box.checked = false); // Uncheck boxes
+      })
+      .catch((error) => console.log('Error sharing', error));
+    } else {
+      // Fallback for older browsers: copy to clipboard
+      navigator.clipboard.writeText(textToShare).then(() => {
         alert(`Copied ${links.length} link(s) to the clipboard.`);
+        // --- AND ADD THIS LINE ---
+        checkedBoxes.forEach(box => box.checked = false); // Uncheck boxes
       });
-    });
-  }
-});
-
-  function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
-  }
-
+    }
+  });
+}
   function createResourceCard(resource) {
     const card = document.createElement("div");
     card.className = "resource-card";
