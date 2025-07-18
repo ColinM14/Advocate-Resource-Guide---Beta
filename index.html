@@ -436,6 +436,7 @@ header h1 {
 <script>
   let allResources = [];
 
+  // Fetch data as soon as the page loads and store it
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
@@ -444,61 +445,59 @@ header h1 {
     })
     .catch(error => console.error("Error fetching data:", error));
 
-document.addEventListener('DOMContentLoaded', () => {
-  // --- Search Listeners (no change) ---
-  const searchButton = document.getElementById('searchButton');
-  const searchInput = document.getElementById('searchInput');
-  if (searchButton) {
-    searchButton.addEventListener('click', performSearch);
-  }
-  if (searchInput) {
-    searchInput.addEventListener('keyup', (event) => {
-      if (event.key === 'Enter') {
-        performSearch();
-      }
-    });
-  }
+  // Add event listeners once the document is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const copyFormsButton = document.getElementById('copySelectedForms');
 
-// Find the 'copyFormsButton' listener inside your DOMContentLoaded block and replace it with this
-
-const copyFormsButton = document.getElementById('copySelectedForms');
-if (copyFormsButton) {
-  copyFormsButton.addEventListener('click', () => {
-    // Find all checkboxes on the page that are currently checked
-    const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
-    
-    if (checkedBoxes.length === 0) {
-      alert("Please select one or more forms to copy.");
-      return;
+    if (searchButton) {
+      searchButton.addEventListener('click', performSearch);
     }
-
-    // Extract the link from each checkbox's data-link attribute
-    const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-    const textToShare = "Here are the links you requested:\n" + links.join('\n');
-
-    // Check if the browser supports the modern Web Share API
-    if (navigator.share) {
-      navigator.share({
-        title: 'Shared Form Links',
-        text: textToShare,
-      })
-      .then(() => {
-        console.log('Successful share');
-        // --- ADD THIS LINE ---
-        checkedBoxes.forEach(box => box.checked = false); // Uncheck boxes
-      })
-      .catch((error) => console.log('Error sharing', error));
-    } else {
-      // Fallback for older browsers: copy to clipboard
-      navigator.clipboard.writeText(textToShare).then(() => {
-        alert(`Copied ${links.length} link(s) to the clipboard.`);
-        // --- AND ADD THIS LINE ---
-        checkedBoxes.forEach(box => box.checked = false); // Uncheck boxes
+    if (searchInput) {
+      searchInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+          performSearch();
+        }
+      });
+    }
+    if (copyFormsButton) {
+      copyFormsButton.addEventListener('click', () => {
+        const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
+        if (checkedBoxes.length === 0) {
+          alert("Please select one or more forms to copy.");
+          return;
+        }
+        const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+        const textToShare = "Here are the links you requested:\n" + links.join('\n');
+        if (navigator.share) {
+          navigator.share({
+            title: 'Shared Form Links',
+            text: textToShare,
+          })
+          .then(() => {
+            console.log('Successful share');
+            checkedBoxes.forEach(box => box.checked = false);
+          })
+          .catch((error) => console.log('Error sharing', error));
+        } else {
+          navigator.clipboard.writeText(textToShare).then(() => {
+            alert(`Copied ${links.length} link(s) to the clipboard.`);
+            checkedBoxes.forEach(box => box.checked = false);
+          });
+        }
       });
     }
   });
-}
-});
+
+  // -----------------------------------------
+  // All function definitions should be out here
+  // -----------------------------------------
+
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
+  }
+
   function createResourceCard(resource) {
     const card = document.createElement("div");
     card.className = "resource-card";
@@ -534,15 +533,15 @@ if (copyFormsButton) {
       const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
       return nameMatch || descMatch || catMatch;
     });
-      if (searchResults.length > 0) {
-  searchResults.forEach(resource => {
-    const categoryHeader = document.createElement("h4");
-    categoryHeader.className = "search-result-category";
-    categoryHeader.textContent = `Category: ${resource.Category}`;
-    const cardElement = createResourceCard(resource);
-    resultsContainer.appendChild(categoryHeader);
-    resultsContainer.appendChild(cardElement);
-});
+    if (searchResults.length > 0) {
+      searchResults.forEach(resource => {
+        const categoryHeader = document.createElement("h4");
+        categoryHeader.className = "search-result-category";
+        categoryHeader.textContent = `Category: ${resource.Category}`;
+        const cardElement = createResourceCard(resource);
+        resultsContainer.appendChild(categoryHeader);
+        resultsContainer.appendChild(cardElement);
+      });
     } else {
       resultsContainer.innerHTML = '<p style="text-align: center; margin-top: 20px;">No results found.</p>';
     }
@@ -570,7 +569,7 @@ if (copyFormsButton) {
     const container = document.getElementById("resourceContent");
     if (container.dataset.loaded) return;
     container.dataset.loaded = true;
-    container.innerHTML = ''; // Clear previous content
+    container.innerHTML = ''; 
 
     const categories = [...new Set(allResources.map(item => item.Category))].sort();
     const row = document.createElement("div");
@@ -701,26 +700,24 @@ if (copyFormsButton) {
     });
   }
 
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(page => {
-    page.classList.remove('visible');
-  });
-  document.getElementById(id).classList.add('visible');
-  
-  const pagesWithBackButton = ['resources', 'favorites', 'disclosures', 'forms', 'search'];
-  
-  if (pagesWithBackButton.includes(id)) {
-    const header = document.getElementById('main-header');
-    const backButton = document.querySelector(`#${id} .back-button`);
-    if (header && backButton) {
-      backButton.style.top = header.offsetHeight + 'px';
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('visible');
+    });
+    document.getElementById(id).classList.add('visible');
+    
+    const pagesWithBackButton = ['resources', 'favorites', 'disclosures', 'forms', 'search'];
+    if (pagesWithBackButton.includes(id)) {
+      const header = document.getElementById('main-header');
+      const backButton = document.querySelector(`#${id} .back-button`);
+      if (header && backButton) {
+        backButton.style.top = header.offsetHeight + 'px';
+      }
     }
+
+    if (id === 'resources') loadResources();
+    if (id === 'favorites') loadFavorites();
   }
-
-  if (id === 'resources') loadResources();
-  if (id === 'favorites') loadFavorites();
-}
-
 </script>
 </body>
 </html>
