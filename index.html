@@ -296,10 +296,9 @@ header h1 {
     <p>Loading favorites...</p>
   </div>
 </div>
-  <div id="search" class="page">
+<div id="search" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-</div>
-  
+
   <div class="card">
     <h3>Search Resources</h3>
     <div class="search-bar">
@@ -565,7 +564,11 @@ function showPage(id) {
   if (id === 'resources') loadResources();
   if (id === 'favorites') loadFavorites();
 }
-  }
+
+  if (id === 'resources') loadResources();
+  if (id === 'favorites') loadFavorites();
+}
+  
 </script>
 </body>
 </html>
