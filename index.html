@@ -32,7 +32,7 @@
     .page {
       display: none;
       padding: 20px;
-      padding-bottom: 120px; /* Add padding to prevent content from hiding behind sticky buttons */
+      padding-bottom: 120px;
     }
     .visible {
       display: block;
@@ -223,7 +223,7 @@
       box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
       display: flex;
       gap: 10px;
-      margin: 0 -20px -120px -20px; /* Adjust for page padding */
+      margin: 20px -20px -120px -20px;
     }
     .copy-low-income-documents-container button {
       flex: 1;
@@ -235,10 +235,10 @@
       border-radius: 8px;
       cursor: pointer;
     }
-    #copySelectedDocumentsText {
+    #copySelectedDocumentsText_low-income-documents, #copySelectedDocumentsText_PPOCs {
       background: #66b1e2;
     }
-    #shareSelectedDocuments {
+    #shareSelectedDocuments_low-income-documents, #shareSelectedDocuments_PPOCs {
       background: #715191;
     }
   </style>
@@ -360,9 +360,9 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    // This is only for the search bar, which is static in the HTML
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
-
     if (searchButton) {
       searchButton.addEventListener('click', performSearch);
     }
@@ -420,13 +420,11 @@
             if (event.key === 'Enter') performSearch();
         });
     }
-
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('searchResults');
     const searchTerm = searchInput.value.toLowerCase().trim();
     resultsContainer.innerHTML = '';
     if (!searchTerm) return;
-
     const searchResults = allResources.filter(resource => {
       const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
       const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
@@ -475,7 +473,6 @@
     backButton.textContent = '🏠 Back to Home';
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
-
     const cpLinks = allResources
       .filter(item => item.Category === '**CarePatrol Links**')
       .sort((a, b) => a.Name.localeCompare(b.Name));
@@ -499,11 +496,9 @@
     backButton.textContent = '🏠 Back to Home';
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
-
     const categories = [...new Set(allResources.map(item => item.Category))]
       .filter(cat => !['**CarePatrol Links**', 'Low Income Document', 'PPOC'].includes(cat))
       .sort();
-      
     const row = document.createElement("div");
     row.className = "category-row";
     categories.forEach(cat => {
@@ -580,7 +575,6 @@
     backButton.textContent = '🏠 Back to Home';
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
-
     const documents = allResources
       .filter(item => item.Category === categoryName)
       .sort((a, b) => a.Name.localeCompare(b.Name));
