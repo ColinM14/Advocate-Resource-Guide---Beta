@@ -327,7 +327,7 @@
     copyButton.addEventListener('click', () => {
       const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
       if (checkedBoxes.length === 0) {
-        alert("Please select one or more items to copy."); // Corrected line
+        alert("Please select one or more items to copy.");
         return;
       }
       const links = Array.from(checkedBoxes).map(box => box.dataset.link);
@@ -343,7 +343,7 @@
     shareButton.addEventListener('click', () => {
       const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
       if (checkedBoxes.length === 0) {
-        alert("Please select one or more items to share."); // Corrected line
+        alert("Please select one or more items to share.");
         return;
       }
       const links = Array.from(checkedBoxes).map(box => box.dataset.link);
