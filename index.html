@@ -319,45 +319,25 @@
     })
     .catch(error => console.error("Error fetching data:", error));
 
- function addDocumentButtonListeners(pageId) {
-  const shareButton = document.getElementById(`shareSelectedDocuments_${pageId}`);
-  const copyButton = document.getElementById(`copySelectedDocumentsText_${pageId}`);
+  function addDocumentButtonListeners(pageId) {
+    const shareButton = document.getElementById(`shareSelectedDocuments_${pageId}`);
+    const copyButton = document.getElementById(`copySelectedDocumentsText_${pageId}`);
 
-  if (copyButton) {
-    copyButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more items to copy.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToCopy = links.join('\n');
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        alert(`Copied ${links.length} link(s) to the clipboard.`);
-        checkedBoxes.forEach(box => box.checked = false);
+    if (copyButton) {
+      copyButton.addEventListener('click', () => {
+        const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
+        if (checkedBoxes.length === 0) {
+          alert("Please select one or more items to copy.");
+          return;
+        }
+        const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+        const textToCopy = links.join('\n');
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          alert(`Copied ${links.length} link(s) to the clipboard.`);
+          checkedBoxes.forEach(box => box.checked = false);
+        });
       });
-    });
-  }
-
-  if (shareButton) {
-    shareButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more items to share.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToShare = "Here are the links you requested:\n" + links.join('\n');
-      if (navigator.share) {
-        navigator.share({ title: 'Shared Links', text: textToShare })
-          .then(() => checkedBoxes.forEach(box => box.checked = false))
-          .catch((error) => console.log('Error sharing', error));
-      } else {
-        alert("Share feature not available. Use the 'Copy Links' button instead.");
-      }
-    });
-  }
-}
+    }
 
     if (shareButton) {
       shareButton.addEventListener('click', () => {
@@ -380,17 +360,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    // This is only for the search bar, which is static in the HTML
-    const searchButton = document.getElementById('searchButton');
-    const searchInput = document.getElementById('searchInput');
-    if (searchButton) {
-      searchButton.addEventListener('click', performSearch);
-    }
-    if (searchInput) {
-      searchInput.addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') performSearch();
-      });
-    }
+    // This is only for the search bar, which is dynamically created now
   });
 
   function copyText(text) {
@@ -439,6 +409,7 @@
         document.getElementById('searchInput').addEventListener('keyup', (event) => {
             if (event.key === 'Enter') performSearch();
         });
+        document.getElementById('searchInput').focus();
     }
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('searchResults');
@@ -517,7 +488,7 @@
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
     const categories = [...new Set(allResources.map(item => item.Category))]
-      .filter(cat => !['**CarePatrol Links**', 'Low Income Document', 'PPOC'].includes(cat))
+      .filter(cat => !['**CarePatrol Links**', 'Low Income Documents', 'PPOCs'].includes(cat))
       .sort();
     const row = document.createElement("div");
     row.className = "category-row";
@@ -628,7 +599,6 @@
 
   function loadFavorites() {
     const container = document.getElementById("favorites");
-    // Dynamically create favorites UI if it doesn't exist
     if (!container.dataset.loaded) {
         container.dataset.loaded = true;
         container.innerHTML = `
@@ -698,7 +668,10 @@
     document.querySelectorAll('.page').forEach(page => {
       page.classList.remove('visible');
     });
-    document.getElementById(id).classList.add('visible');
+    const targetPage = document.getElementById(id);
+    if (targetPage) {
+        targetPage.classList.add('visible');
+    }
     
     const pagesWithBackButton = ['Partner-Network', 'favorites', 'disclosures', 'low-income-documents', 'search', 'carepatrol-links', 'PPOCs'];
     if (pagesWithBackButton.includes(id)) {
@@ -713,8 +686,8 @@
     if (id === 'favorites') loadFavorites();
     if (id === 'carepatrol-links') loadCarePatrolLinks();
     if (id === 'low-income-documents') createDocumentPage('low-income-documents', 'Low Income Document');
-    if (id === 'PPOCs') createDocumentPage('PPOCs', 'PPOC');
+    if (id === 'PPOCs') createDocumentPage('PPOCs', 'PPOCs');
   }
 </script>
 </body>
-</html>
+</html></html></html>
