@@ -266,6 +266,8 @@
 <div id="carepatrol-links" class="page"></div>
 <div id="low-income-documents" class="page"></div>
 <div id="PPOCs" class="page"></div>
+<div id="favorites" class="page"></div>
+<div id="search" class="page"></div>
 
 <div id="disclosures" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
@@ -305,9 +307,6 @@
     </div>
   </div>
 </div>
-
-<div id="favorites" class="page"></div>
-<div id="search" class="page"></div>
 
 <script>
   let allResources = [];
@@ -401,20 +400,33 @@
 
   function performSearch() {
     const container = document.getElementById('search');
-    const searchInput = document.getElementById('searchInput');
-    const resultsContainer = document.getElementById('searchResults');
+    // Dynamically create search UI if it doesn't exist
     if (!container.dataset.loaded) {
         container.dataset.loaded = true;
-        const backButton = document.createElement('div');
-        backButton.className = 'back-button';
-        backButton.textContent = '🏠 Back to Home';
-        backButton.onclick = () => showPage('home');
-        const searchCard = container.querySelector('.card');
-        container.insertBefore(backButton, searchCard);
+        container.innerHTML = `
+            <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
+            <div class="card">
+              <h3>Search Partner Network</h3>
+              <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name, category, etc...">
+                <button id="searchButton">Search</button>
+              </div>
+            </div>
+            <div id="searchResults"></div>
+        `;
+        // Re-add listeners to the newly created elements
+        document.getElementById('searchButton').addEventListener('click', performSearch);
+        document.getElementById('searchInput').addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') performSearch();
+        });
     }
+
+    const searchInput = document.getElementById('searchInput');
+    const resultsContainer = document.getElementById('searchResults');
     const searchTerm = searchInput.value.toLowerCase().trim();
     resultsContainer.innerHTML = '';
     if (!searchTerm) return;
+
     const searchResults = allResources.filter(resource => {
       const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
       const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
@@ -463,6 +475,7 @@
     backButton.textContent = '🏠 Back to Home';
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
+
     const cpLinks = allResources
       .filter(item => item.Category === '**CarePatrol Links**')
       .sort((a, b) => a.Name.localeCompare(b.Name));
@@ -486,9 +499,11 @@
     backButton.textContent = '🏠 Back to Home';
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
+
     const categories = [...new Set(allResources.map(item => item.Category))]
       .filter(cat => !['**CarePatrol Links**', 'Low Income Document', 'PPOC'].includes(cat))
       .sort();
+      
     const row = document.createElement("div");
     row.className = "category-row";
     categories.forEach(cat => {
@@ -565,6 +580,7 @@
     backButton.textContent = '🏠 Back to Home';
     backButton.onclick = () => showPage('home');
     container.appendChild(backButton);
+
     const documents = allResources
       .filter(item => item.Category === categoryName)
       .sort((a, b) => a.Name.localeCompare(b.Name));
@@ -598,13 +614,13 @@
 
   function loadFavorites() {
     const container = document.getElementById("favorites");
+    // Dynamically create favorites UI if it doesn't exist
     if (!container.dataset.loaded) {
         container.dataset.loaded = true;
-        const backButton = document.createElement('div');
-        backButton.className = 'back-button';
-        backButton.textContent = '🏠 Back to Home';
-        backButton.onclick = () => showPage('home');
-        container.insertBefore(backButton, container.firstChild);
+        container.innerHTML = `
+            <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
+            <div id="favoritesContent"></div>
+        `;
     }
     const contentContainer = document.getElementById("favoritesContent");
     contentContainer.innerHTML = "";
@@ -652,8 +668,8 @@
         });
       catDiv.addEventListener("click", () => {
         const isOpen = wrapper.style.display === "block";
-        document.querySelectorAll("#favoritesContent .resources-wrapper").forEach(w => w.style.display = "none");
-        document.querySelectorAll("#favoritesContent .category").forEach(c => c.classList.remove("active"));
+        document.querySelectorAll("#favorites .resources-wrapper").forEach(w => w.style.display = "none");
+        document.querySelectorAll("#favorites .category").forEach(c => c.classList.remove("active"));
         if (!isOpen) {
           wrapper.style.display = "block";
           catDiv.classList.add("active");
