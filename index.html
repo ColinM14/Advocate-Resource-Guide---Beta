@@ -32,6 +32,7 @@
     .page {
       display: none;
       padding: 20px;
+      padding-bottom: 120px; /* Add padding to prevent content from hiding behind sticky buttons */
     }
     .visible {
       display: block;
@@ -149,6 +150,7 @@
       align-items: center;
       gap: 8px;
       z-index: 1000;
+      margin-bottom: 20px;
     }
     .card {
       background: white;
@@ -216,11 +218,12 @@
       left: 0;
       right: 0;
       padding: 15px;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       border-top: 1px solid #ddd;
       box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
       display: flex;
       gap: 10px;
+      margin: 0 -20px -120px -20px; /* Adjust for page padding */
     }
     .copy-low-income-documents-container button {
       flex: 1;
@@ -251,6 +254,7 @@
     <button onclick="showPage('carepatrol-links')">CarePatrol Links</button>
     <button onclick="showPage('Partner-Network')">Partner Network</button>
     <button onclick="showPage('low-income-documents')">Low Income Documents</button>
+    <button onclick="showPage('PPOCs')">PPOCs</button>
     <button onclick="showPage('disclosures')">Disclosures</button>
     <button onclick="showPage('search')">Search</button>
     <button onclick="showPage('favorites')">⭐ My Favorites</button>
@@ -258,107 +262,10 @@
   </div>
 </div>
 
-<div id="Partner-Network" class="page">
-  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div id="resourceContent"></div>
-</div>
-
-<div id="carepatrol-links" class="page">
-  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div id="carepatrolLinksContent"></div>
-</div>
-
-<div id="low-income-documents" class="page">
-  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div class="card">
-    <h3>2024 AAA Colorado Adult Medicaid Programs</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1wt0eQ-WrU9AhUXl-FSDknpgNjHUYMjR3/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1wt0eQ-WrU9AhUXl-FSDknpgNjHUYMjR3/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>2025 Medicaid - Social Security Income Limits</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1FUX4sFJbIgXH7shNrRNh1akD20qMmdV-/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1FUX4sFJbIgXH7shNrRNh1akD20qMmdV-/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>2025 Medicaid Pending List</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1C4Swa14RaUsgRvnNZr-tZSWNO0UI_Shw/view?usp=sharing" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1C4Swa14RaUsgRvnNZr-tZSWNO0UI_Shw/view?usp=sharing"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Assisted Living - Medicaid Community list</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1yb6LQjrYr2g3hXMAlMv8RN0N1QY8P_tS/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1yb6LQjrYr2g3hXMAlMv8RN0N1QY8P_tS/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Home Care - Medicaid List</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1sttdj6hKVOjIC_9dV7KC7nbFoOYUgcPv/view?usp=sharing" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1sttdj6hKVOjIC_9dV7KC7nbFoOYUgcPv/view?usp=sharing"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Income Based Housing - Seniors 2025</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1_NsBXxZqzhnezskSrIAn-aZ6r2YO_rXw/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1_NsBXxZqzhnezskSrIAn-aZ6r2YO_rXw/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Income Trust Application</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1NWfZefcbgrLk9v3ah_036Wdr_JCyHIXN/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1NWfZefcbgrLk9v3ah_036Wdr_JCyHIXN/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Instructions for Completing the Income Trust Form</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/1Tqd5OwC9_x1SBWkPNTLjZ9V0D5qLC8YG/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1Tqd5OwC9_x1SBWkPNTLjZ9V0D5qLC8YG/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>LTC Medicaid Application</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/187hit7OET1BEYejH-ltZfqZmGGP8Mdy6/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/187hit7OET1BEYejH-ltZfqZmGGP8Mdy6/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Medicaid One Pager Application</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/19eSfo4CAGHL-LafVcRb2kQ10w0W9C58W/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/19eSfo4CAGHL-LafVcRb2kQ10w0W9C58W/view?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Nursing Home List / Medicaid Long Term Care</h3>
-    <div class="button-row">
-      <a href="https://drive.google.com/file/d/132JpSIaIiBrfnuvvhtVq0PxTjEI-G9Ld/view?usp=sharing" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/132JpSIaIiBrfnuvvhtVq0PxTjEI-G9Ld/view?usp=sharing"> Select</label>
-    </div>
-  </div>
-  <div class="card">
-    <h3>Medicaid Application Instructions</h3>
-    <div class="button-row">
-      <a href="https://docs.google.com/document/d/1DfTigUZBvnwVXcctxprnxSrRicpv6C1G9oZ0z7ZH4f8/edit?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
-      <label class="form-checkbox-label"><input type="checkbox" class="form-checkbox" data-link="https://docs.google.com/document/d/1DfTigUZBvnwVXcctxprnxSrRicpv6C1G9oZ0z7ZH4f8/edit?usp=drive_link"> Select</label>
-    </div>
-  </div>
-  <div class="copy-low-income-documents-container">
-    <button id="shareSelectedDocuments">Share Links</button>
-    <button id="copySelectedDocumentsText">Copy Links</button>
-  </div>
-</div>
+<div id="Partner-Network" class="page"></div>
+<div id="carepatrol-links" class="page"></div>
+<div id="low-income-documents" class="page"></div>
+<div id="PPOCs" class="page"></div>
 
 <div id="disclosures" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
@@ -399,24 +306,8 @@
   </div>
 </div>
 
-<div id="favorites" class="page">
-  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div id="favoritesContent">
-    <p>Loading favorites...</p>
-  </div>
-</div>
-
-<div id="search" class="page">
-  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div class="card">
-    <h3>Search Partner Network</h3>
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search by name, category, etc...">
-      <button id="searchButton">Search</button>
-    </div>
-  </div>
-  <div id="searchResults"></div>
-</div>
+<div id="favorites" class="page"></div>
+<div id="search" class="page"></div>
 
 <script>
   let allResources = [];
@@ -426,32 +317,18 @@
     .then(data => {
       allResources = data;
       console.log("Resources loaded and ready.");
-      loadCarePatrolLinks();
     })
     .catch(error => console.error("Error fetching data:", error));
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const searchButton = document.getElementById('searchButton');
-    const searchInput = document.getElementById('searchInput');
-    const shareDocumentsButton = document.getElementById('shareSelectedDocuments');
-    const copyDocumentsTextButton = document.getElementById('copySelectedDocumentsText');
+  function addDocumentButtonListeners(pageId) {
+    const shareButton = document.getElementById(`shareSelectedDocuments_${pageId}`);
+    const copyButton = document.getElementById(`copySelectedDocumentsText_${pageId}`);
 
-    if (searchButton) {
-      searchButton.addEventListener('click', performSearch);
-    }
-    if (searchInput) {
-      searchInput.addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') {
-          performSearch();
-        }
-      });
-    }
-
-    if (copyDocumentsTextButton) {
-      copyDocumentsTextButton.addEventListener('click', () => {
-        const checkedBoxes = document.querySelectorAll('#low-income-documents .form-checkbox:checked');
+    if (copyButton) {
+      copyButton.addEventListener('click', () => {
+        const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
         if (checkedBoxes.length === 0) {
-          alert("Please select one or more documents to copy.");
+          alert("Please select one or more items to copy.");
           return;
         }
         const links = Array.from(checkedBoxes).map(box => box.dataset.link);
@@ -463,26 +340,36 @@
       });
     }
 
-    if (shareDocumentsButton) {
-      shareDocumentsButton.addEventListener('click', () => {
-        const checkedBoxes = document.querySelectorAll('#low-income-documents .form-checkbox:checked');
+    if (shareButton) {
+      shareButton.addEventListener('click', () => {
+        const checkedBoxes = document.querySelectorAll(`#${pageId} .form-checkbox:checked`);
         if (checkedBoxes.length === 0) {
-          alert("Please select one or more documents to share.");
+          alert("Please select one or more items to share.");
           return;
         }
         const links = Array.from(checkedBoxes).map(box => box.dataset.link);
         const textToShare = "Here are the links you requested:\n" + links.join('\n');
-        
         if (navigator.share) {
-          navigator.share({ title: 'Shared Form Links', text: textToShare })
-            .then(() => {
-              console.log('Successful share');
-              checkedBoxes.forEach(box => box.checked = false);
-            })
+          navigator.share({ title: 'Shared Links', text: textToShare })
+            .then(() => checkedBoxes.forEach(box => box.checked = false))
             .catch((error) => console.log('Error sharing', error));
         } else {
-          alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
+          alert("Share feature not available. Use the 'Copy Links' button instead.");
         }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+
+    if (searchButton) {
+      searchButton.addEventListener('click', performSearch);
+    }
+    if (searchInput) {
+      searchInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') performSearch();
       });
     }
   });
@@ -513,19 +400,27 @@
   }
 
   function performSearch() {
+    const container = document.getElementById('search');
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('searchResults');
+    if (!container.dataset.loaded) {
+        container.dataset.loaded = true;
+        const backButton = document.createElement('div');
+        backButton.className = 'back-button';
+        backButton.textContent = '🏠 Back to Home';
+        backButton.onclick = () => showPage('home');
+        const searchCard = container.querySelector('.card');
+        container.insertBefore(backButton, searchCard);
+    }
     const searchTerm = searchInput.value.toLowerCase().trim();
     resultsContainer.innerHTML = '';
     if (!searchTerm) return;
-
     const searchResults = allResources.filter(resource => {
       const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
       const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
       const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
       return nameMatch || descMatch || catMatch;
     });
-
     if (searchResults.length > 0) {
       searchResults.forEach(resource => {
         const categoryHeader = document.createElement("h4");
@@ -559,10 +454,15 @@
   }
     
   function loadCarePatrolLinks() {
-    const container = document.getElementById('carepatrolLinksContent');
+    const container = document.getElementById('carepatrol-links');
     if (!container || container.dataset.loaded) return;
     container.dataset.loaded = true;
     container.innerHTML = '';
+    const backButton = document.createElement('div');
+    backButton.className = 'back-button';
+    backButton.textContent = '🏠 Back to Home';
+    backButton.onclick = () => showPage('home');
+    container.appendChild(backButton);
     const cpLinks = allResources
       .filter(item => item.Category === '**CarePatrol Links**')
       .sort((a, b) => a.Name.localeCompare(b.Name));
@@ -572,17 +472,22 @@
         container.appendChild(cardElement);
       });
     } else {
-      container.innerHTML = "<p>No CarePatrol links found.</p>";
+      container.innerHTML += "<p>No CarePatrol links found.</p>";
     }
   }
   
   function loadPartnerNetwork() {
-    const container = document.getElementById("resourceContent");
+    const container = document.getElementById("Partner-Network");
     if (container.dataset.loaded) return;
     container.dataset.loaded = true;
     container.innerHTML = '';
+    const backButton = document.createElement('div');
+    backButton.className = 'back-button';
+    backButton.textContent = '🏠 Back to Home';
+    backButton.onclick = () => showPage('home');
+    container.appendChild(backButton);
     const categories = [...new Set(allResources.map(item => item.Category))]
-      .filter(cat => cat !== '**CarePatrol Links**')
+      .filter(cat => !['**CarePatrol Links**', 'Low Income Document', 'PPOC'].includes(cat))
       .sort();
     const row = document.createElement("div");
     row.className = "category-row";
@@ -636,8 +541,8 @@
         });
       catDiv.addEventListener("click", () => {
         const isOpen = wrapper.style.display === "block";
-        document.querySelectorAll(".resources-wrapper").forEach(w => w.style.display = "none");
-        document.querySelectorAll(".category").forEach(c => c.classList.remove("active"));
+        document.querySelectorAll("#Partner-Network .resources-wrapper").forEach(w => w.style.display = "none");
+        document.querySelectorAll("#Partner-Network .category").forEach(c => c.classList.remove("active"));
         if (!isOpen) {
           wrapper.style.display = "block";
           catDiv.classList.add("active");
@@ -650,12 +555,62 @@
     container.appendChild(row);
   }
 
+  function createDocumentPage(pageId, categoryName) {
+    const container = document.getElementById(pageId);
+    if (!container || container.dataset.loaded) return;
+    container.dataset.loaded = true;
+    container.innerHTML = '';
+    const backButton = document.createElement('div');
+    backButton.className = 'back-button';
+    backButton.textContent = '🏠 Back to Home';
+    backButton.onclick = () => showPage('home');
+    container.appendChild(backButton);
+    const documents = allResources
+      .filter(item => item.Category === categoryName)
+      .sort((a, b) => a.Name.localeCompare(b.Name));
+    if (documents.length > 0) {
+      documents.forEach(doc => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <h3>${doc.Name}</h3>
+          <div class="button-row">
+            <a href="${doc.Website}" target="_blank" class="action-button">Visit Form</a>
+            <label class="form-checkbox-label">
+              <input type="checkbox" class="form-checkbox" data-link="${doc.Website}"> Select
+            </label>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      const buttonContainer = document.createElement('div');
+      buttonContainer.className = 'copy-low-income-documents-container';
+      buttonContainer.innerHTML = `
+        <button id="copySelectedDocumentsText_${pageId}">Copy Links</button>
+        <button id="shareSelectedDocuments_${pageId}">Share Links</button>
+      `;
+      container.appendChild(buttonContainer);
+      addDocumentButtonListeners(pageId);
+    } else {
+      container.innerHTML += `<p style="text-align: center; margin-top: 20px;">No documents found for ${categoryName}.</p>`;
+    }
+  }
+
   function loadFavorites() {
-    const container = document.getElementById("favoritesContent");
-    container.innerHTML = "";
+    const container = document.getElementById("favorites");
+    if (!container.dataset.loaded) {
+        container.dataset.loaded = true;
+        const backButton = document.createElement('div');
+        backButton.className = 'back-button';
+        backButton.textContent = '🏠 Back to Home';
+        backButton.onclick = () => showPage('home');
+        container.insertBefore(backButton, container.firstChild);
+    }
+    const contentContainer = document.getElementById("favoritesContent");
+    contentContainer.innerHTML = "";
     const favs = getFavorites();
     if (favs.length === 0) {
-      container.innerHTML = '<p style="text-align: center; margin-top: 20px;">You have no favorite categories yet.</p>';
+      contentContainer.innerHTML = '<p style="text-align: center; margin-top: 20px;">You have no favorite categories yet.</p>';
       return;
     }
     favs.forEach(cat => {
@@ -704,8 +659,8 @@
           catDiv.classList.add("active");
         }
       });
-      container.appendChild(catDiv);
-      container.appendChild(wrapper);
+      contentContainer.appendChild(catDiv);
+      contentContainer.appendChild(wrapper);
     });
   }
 
@@ -715,7 +670,7 @@
     });
     document.getElementById(id).classList.add('visible');
     
-    const pagesWithBackButton = ['Partner-Network', 'favorites', 'disclosures', 'low-income-documents', 'search', 'carepatrol-links'];
+    const pagesWithBackButton = ['Partner-Network', 'favorites', 'disclosures', 'low-income-documents', 'search', 'carepatrol-links', 'PPOCs'];
     if (pagesWithBackButton.includes(id)) {
       const header = document.getElementById('main-header');
       const backButton = document.querySelector(`#${id} .back-button`);
@@ -727,6 +682,8 @@
     if (id === 'Partner-Network') loadPartnerNetwork();
     if (id === 'favorites') loadFavorites();
     if (id === 'carepatrol-links') loadCarePatrolLinks();
+    if (id === 'low-income-documents') createDocumentPage('low-income-documents', 'Low Income Document');
+    if (id === 'PPOCs') createDocumentPage('PPOCs', 'PPOC');
   }
 </script>
 </body>
