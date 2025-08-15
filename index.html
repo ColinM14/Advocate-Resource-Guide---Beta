@@ -87,7 +87,7 @@ header h1 {
       cursor: pointer;
       color: gold;
     }
-    .resources-wrapper {
+    .Partner-Network-wrapper {
       display: none;
       margin-bottom: 20px;
     }
@@ -210,7 +210,7 @@ header h1 {
   width: 18px;
   height: 18px;
 }
-.copy-forms-container {
+.copy-low-income-documents-container {
   position: sticky;
   bottom: 0;
   left: 0;
@@ -223,7 +223,7 @@ header h1 {
   gap: 10px;    /* This adds space between the buttons */
 }
 
-.copy-forms-container button {
+.copy-low-income-documents-container button {
   flex: 1; /* This makes each button take up equal space */
   padding: 16px;
   font-size: 18px;
@@ -234,11 +234,11 @@ header h1 {
   cursor: pointer;
 }
 
-#copySelectedFormsText {
-  background: #66b1e2; /* Blue color from your other copy buttons */
+#copySelectedDocumentsText {
+  background: #66b1e2;
 }
 
-#copySelectedForms {
+#shareSelectedDocuments {
   background: #715191; 
 }
   </style>
@@ -249,9 +249,11 @@ header h1 {
   <h1>Advocate Resource Hub</h1>
 </header>
 <div id="home" class="page visible">
+    <div id="carepatrol-links" class="card">
+    </div>
  <div class="home-buttons">
-  <button onclick="showPage('resources')">Advocate Resources</button>
-  <button onclick="showPage('forms')">Forms</button> 
+  <button onclick="showPage('Partner-Network')">Partner Network</button>
+  <button onclick="showPage('low-income-documents')">Low Income Documents</button> 
   <button onclick="showPage('disclosures')">Disclosures</button>
   <button onclick="showPage('search')">Search</button>
   <button onclick="showPage('favorites')">⭐ My Favorites</button>
@@ -259,12 +261,12 @@ header h1 {
   </div>
 </div>
 
-<div id="resources" class="page">
+<div id="Partner-Network" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
   <div id="resourceContent"></div>
 </div>
 
-<div id="forms" class="page">
+<div id="low-income-documents" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
 
   <div class="card">
@@ -387,9 +389,9 @@ header h1 {
     </div>
   </div>
 
-<div class="copy-forms-container">
-  <button id="copySelectedForms">Share Selected Links</button>
-  <button id="copySelectedFormsText">Copy Links</button>
+<div class="copy-low-income-documents-container">
+  <button id="shareSelectedDocuments">Share Links</button>
+  <button id="copySelectedDocumentsText">Copy Links</button>
 </div>
 
 </div>
@@ -399,29 +401,29 @@ header h1 {
   <div class="card">
     <h3>General Disclosure</h3>
     <div class="button-row">
-      <a href="https://fs11.formsite.com/5LkyVC/sjuyzngbeg/index" target="_blank" class="action-button">Visit Link</a>
-      <button class="copy-button" onclick="copyText('https://fs11.formsite.com/5LkyVC/sjuyzngbeg/index')">Copy Link</button>
+      <a href="https://fs11.low-income-documentsite.com/5LkyVC/sjuyzngbeg/index" target="_blank" class="action-button">Visit Link</a>
+      <button class="copy-button" onclick="copyText('https://fs11.low-income-documentsite.com/5LkyVC/sjuyzngbeg/index')">Copy Link</button>
     </div>
   </div>
   <div class="card">
     <h3>James Disclosure</h3>
     <div class="button-row">
-      <a href="https://fs11.formsite.com/5LkyVC/iyvtmjabzy/index" target="_blank" class="action-button">Visit Link</a>
-      <button class="copy-button" onclick="copyText('https://fs11.formsite.com/5LkyVC/iyvtmjabzy/index')">Copy Link</button>
+      <a href="https://fs11.low-income-documentsite.com/5LkyVC/iyvtmjabzy/index" target="_blank" class="action-button">Visit Link</a>
+      <button class="copy-button" onclick="copyText('https://fs11.low-income-documentsite.com/5LkyVC/iyvtmjabzy/index')">Copy Link</button>
     </div>
   </div>
   <div class="card">
     <h3>Laura Disclosure</h3>
     <div class="button-row">
-      <a href="https://fs11.formsite.com/5LkyVC/7nsowaf7rp/index" target="_blank" class="action-button">Visit Link</a>
-      <button class="copy-button" onclick="copyText('https://fs11.formsite.com/5LkyVC/7nsowaf7rp/index')">Copy Link</button>
+      <a href="https://fs11.low-income-documentsite.com/5LkyVC/7nsowaf7rp/index" target="_blank" class="action-button">Visit Link</a>
+      <button class="copy-button" onclick="copyText('https://fs11.low-income-documentsite.com/5LkyVC/7nsowaf7rp/index')">Copy Link</button>
     </div>
   </div>
   <div class="card">
     <h3>Rami Disclosure</h3>
     <div class="button-row">
-      <a href="https://fs11.formsite.com/5LkyVC/admx42e1ut/index" target="_blank" class="action-button">Visit Link</a>
-      <button class="copy-button" onclick="copyText('https://fs11.formsite.com/5LkyVC/admx42e1ut/index')">Copy Link</button>
+      <a href="https://fs11.low-income-documentsite.com/5LkyVC/admx42e1ut/index" target="_blank" class="action-button">Visit Link</a>
+      <button class="copy-button" onclick="copyText('https://fs11.low-income-documentsite.com/5LkyVC/admx42e1ut/index')">Copy Link</button>
     </div>
   </div>
   <div class="card">
@@ -444,7 +446,7 @@ header h1 {
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
 
   <div class="card">
-    <h3>Search Resources</h3>
+    <h3>Search Partner-Network</h3>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search by name, category, etc...">
       <button id="searchButton">Search</button>
@@ -457,78 +459,73 @@ header h1 {
 <script>
   let allResources = [];
 
+  // Fetch data as soon as the page loads
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       allResources = data;
       console.log("Resources loaded and ready.");
+      loadCarePatrolLinks(); // Load special links onto the homepage
     })
     .catch(error => console.error("Error fetching data:", error));
 
- document.addEventListener('DOMContentLoaded', () => {
-  // --- Search Listeners (no change) ---
-  const searchButton = document.getElementById('searchButton');
-  const searchInput = document.getElementById('searchInput');
-  if (searchButton) {
-    searchButton.addEventListener('click', performSearch);
-  }
-  if (searchInput) {
-    searchInput.addEventListener('keyup', (event) => {
-      if (event.key === 'Enter') {
-        performSearch();
-      }
-    });
-  }
+  // Add event listeners once the document is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const shareDocumentsButton = document.getElementById('shareSelectedDocuments');
+    const copyDocumentsTextButton = document.getElementById('copySelectedDocumentsText');
 
-  // --- Button Listeners for the Forms Page ---
-  const shareFormsButton = document.getElementById('copySelectedForms');
-  const copyFormsTextButton = document.getElementById('copySelectedFormsText');
-
-  // Logic for the NEW "Copy Links" button
-  if (copyFormsTextButton) {
-    copyFormsTextButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more forms to copy.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToCopy = links.join('\n');
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        alert(`Copied ${links.length} link(s) to the clipboard.`);
-        checkedBoxes.forEach(box => box.checked = false);
+    if (searchButton) {
+      searchButton.addEventListener('click', performSearch);
+    }
+    if (searchInput) {
+      searchInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+          performSearch();
+        }
       });
-    });
-  }
+    }
 
-  // Logic for the "Share Links" button
-  if (shareFormsButton) {
-    shareFormsButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more forms to share.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToShare = "Here are the links you requested:\n" + links.join('\n');
-      
-      if (navigator.share) {
-        navigator.share({
-          title: 'Shared Form Links',
-          text: textToShare,
-        })
-        .then(() => {
-          console.log('Successful share');
+    if (copyDocumentsTextButton) {
+      copyDocumentsTextButton.addEventListener('click', () => {
+        const checkedBoxes = document.querySelectorAll('#low-income-documents .form-checkbox:checked');
+        if (checkedBoxes.length === 0) {
+          alert("Please select one or more documents to copy.");
+          return;
+        }
+        const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+        const textToCopy = links.join('\n');
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          alert(`Copied ${links.length} link(s) to the clipboard.`);
           checkedBoxes.forEach(box => box.checked = false);
-        })
-        .catch((error) => console.log('Error sharing', error));
-      } else {
-        // Informative fallback for browsers that don't support sharing
-        alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
-      }
-    });
-  }
-});
+        });
+      });
+    }
+
+    if (shareDocumentsButton) {
+      shareDocumentsButton.addEventListener('click', () => {
+        const checkedBoxes = document.querySelectorAll('#low-income-documents .form-checkbox:checked');
+        if (checkedBoxes.length === 0) {
+          alert("Please select one or more documents to share.");
+          return;
+        }
+        const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+        const textToShare = "Here are the links you requested:\n" + links.join('\n');
+        
+        if (navigator.share) {
+          navigator.share({ title: 'Shared Form Links', text: textToShare })
+            .then(() => {
+              console.log('Successful share');
+              checkedBoxes.forEach(box => box.checked = false);
+            })
+            .catch((error) => console.log('Error sharing', error));
+        } else {
+          alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
+        }
+      });
+    }
+  });
 
   function copyText(text) {
     navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
@@ -560,15 +557,15 @@ header h1 {
     const resultsContainer = document.getElementById('searchResults');
     const searchTerm = searchInput.value.toLowerCase().trim();
     resultsContainer.innerHTML = '';
-    if (!searchTerm) {
-      return;
-    }
+    if (!searchTerm) return;
+
     const searchResults = allResources.filter(resource => {
       const nameMatch = resource.Name && resource.Name.toLowerCase().includes(searchTerm);
       const descMatch = resource.Description && resource.Description.toLowerCase().includes(searchTerm);
       const catMatch = resource.Category && resource.Category.toLowerCase().includes(searchTerm);
       return nameMatch || descMatch || catMatch;
     });
+
     if (searchResults.length > 0) {
       searchResults.forEach(resource => {
         const categoryHeader = document.createElement("h4");
@@ -601,13 +598,33 @@ header h1 {
     localStorage.setItem("favorites", JSON.stringify(favs));
   }
 
-  function loadResources() {
+  function loadCarePatrolLinks() {
+    const container = document.getElementById('carepatrol-links');
+    if (!container) return;
+    const cpLinks = allResources.filter(item => item.Category === '**CarePatrol Links**');
+    if (cpLinks.length > 0) {
+      let content = '<h3>CarePatrol Links</h3>';
+      cpLinks.forEach(link => {
+        content += `<a href="${link.Website}" class="action-button" target="_blank">${link.Name}</a>`;
+      });
+      container.innerHTML = content;
+      container.style.display = 'flex';
+      container.style.flexDirection = 'column';
+      container.style.gap = '10px';
+      container.style.padding = '20px';
+    }
+  }
+
+  function loadPartnerNetwork() {
     const container = document.getElementById("resourceContent");
     if (container.dataset.loaded) return;
     container.dataset.loaded = true;
-    container.innerHTML = ''; 
+    container.innerHTML = '';
 
-    const categories = [...new Set(allResources.map(item => item.Category))].sort();
+    const categories = [...new Set(allResources.map(item => item.Category))]
+      .filter(cat => cat !== '**CarePatrol Links**')
+      .sort();
+      
     const row = document.createElement("div");
     row.className = "category-row";
     
@@ -679,12 +696,10 @@ header h1 {
     const container = document.getElementById("favoritesContent");
     container.innerHTML = "";
     const favs = getFavorites();
-
     if (favs.length === 0) {
-        container.innerHTML = '<p style="text-align: center; margin-top: 20px;">You have no favorite categories yet.</p>';
-        return;
+      container.innerHTML = '<p style="text-align: center; margin-top: 20px;">You have no favorite categories yet.</p>';
+      return;
     }
-
     favs.forEach(cat => {
       const catDiv = document.createElement("div");
       catDiv.className = "category";
@@ -742,7 +757,7 @@ header h1 {
     });
     document.getElementById(id).classList.add('visible');
     
-    const pagesWithBackButton = ['resources', 'favorites', 'disclosures', 'forms', 'search'];
+    const pagesWithBackButton = ['Partner-Network', 'favorites', 'disclosures', 'low-income-documents', 'search'];
     if (pagesWithBackButton.includes(id)) {
       const header = document.getElementById('main-header');
       const backButton = document.querySelector(`#${id} .back-button`);
@@ -751,7 +766,7 @@ header h1 {
       }
     }
 
-    if (id === 'resources') loadResources();
+    if (id === 'Partner-Network') loadPartnerNetwork();
     if (id === 'favorites') loadFavorites();
   }
 </script>
