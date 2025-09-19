@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Advocate Resource Hub</title>
+  <title>Partner Network Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -102,7 +102,7 @@ header h1 {
       font-size: 16px;
       color: #555;
       margin-top: 25px;
-      margin-bottom: -5px; /* Pulls the card up slightly closer */
+      margin-bottom: -5px;
       padding-left: 10px;
       border-bottom: 2px solid #eee;
       padding-bottom: 5px;
@@ -149,6 +149,7 @@ header h1 {
       align-items: center;
       gap: 8px;
       z-index: 1000;
+      top: 84px; /* Will be set by JS to match header height */
     }
     .card {
       background: white;
@@ -219,12 +220,12 @@ header h1 {
   background-color: rgba(255, 255, 255, 0.9);
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  display: flex; /* This creates the side-by-side layout */
-  gap: 10px;    /* This adds space between the buttons */
+  display: flex;
+  gap: 10px;
 }
 
 .copy-forms-container button {
-  flex: 1; /* This makes each button take up equal space */
+  flex: 1;
   padding: 16px;
   font-size: 18px;
   font-weight: bold;
@@ -234,24 +235,25 @@ header h1 {
   cursor: pointer;
 }
 
-#copySelectedFormsText {
-  background: #66b1e2; /* Blue color from your other copy buttons */
+#copySelectedFormsText, #copySelectedVAFormsText {
+  background: #66b1e2;
 }
 
-#copySelectedForms {
-  background: #715191; 
+#copySelectedForms, #copySelectedVAForms {
+  background: #715191;
 }
   </style>
 </head>
 <body>
 <header id="main-header">
   <img src="https://carepatrol.com/wp-content/uploads/sites/2/2023/07/CP_CarePatrol-Logo_CMYK.svg" alt="CarePatrol Logo" />
-  <h1>Advocate Resource Hub</h1>
+  <h1>Partner Network Hub</h1>
 </header>
 <div id="home" class="page visible">
  <div class="home-buttons">
-  <button onclick="showPage('resources')">Advocate Resources</button>
-  <button onclick="showPage('forms')">Forms</button> 
+  <button onclick="showPage('resources')">Partner Network</button>
+  <button onclick="showPage('forms')">Low Income Documents</button>
+  <button onclick="showPage('varesources')">VA Resources</button>
   <button onclick="showPage('disclosures')">Disclosures</button>
   <button onclick="showPage('search')">Search</button>
   <button onclick="showPage('favorites')">⭐ My Favorites</button>
@@ -266,11 +268,10 @@ header h1 {
 
 <div id="forms" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-
   <div class="card">
     <h3>2024 AAA Colorado Adult Medicaid Programs</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1wt0eQ-WrU9AhUXl-FSDknpgNjHUYMjR3/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1wt0eQ-WrU9AhUXl-FSDknpgNjHUYMjR3/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1wt0eQ-WrU9AhUXl-FSDknpgNjHUYMjR3/view?usp=drive_link"> Select
       </label>
@@ -280,7 +281,7 @@ header h1 {
 <div class="card">
     <h3>2025 Medicaid - Social Security Income Limits</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1FUX4sFJbIgXH7shNrRNh1akD20qMmdV-/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1FUX4sFJbIgXH7shNrRNh1akD20qMmdV-/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1FUX4sFJbIgXH7shNrRNh1akD20qMmdV-/view?usp=drive_link"> Select
       </label>
@@ -290,7 +291,7 @@ header h1 {
   <div class="card">
     <h3>2025 Medicaid Pending List</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1C4Swa14RaUsgRvnNZr-tZSWNO0UI_Shw/view?usp=sharing" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1C4Swa14RaUsgRvnNZr-tZSWNO0UI_Shw/view?usp=sharing" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1C4Swa14RaUsgRvnNZr-tZSWNO0UI_Shw/view?usp=sharing"> Select
       </label>
@@ -300,7 +301,7 @@ header h1 {
   <div class="card">
     <h3>Assisted Living - Medicaid Community list</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1yb6LQjrYr2g3hXMAlMv8RN0N1QY8P_tS/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1yb6LQjrYr2g3hXMAlMv8RN0N1QY8P_tS/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1yb6LQjrYr2g3hXMAlMv8RN0N1QY8P_tS/view?usp=drive_link"> Select
       </label>
@@ -310,7 +311,7 @@ header h1 {
   <div class="card">
     <h3>Home Care - Medicaid List</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1sttdj6hKVOjIC_9dV7KC7nbFoOYUgcPv/view?usp=sharing" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1sttdj6hKVOjIC_9dV7KC7nbFoOYUgcPv/view?usp=sharing" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1sttdj6hKVOjIC_9dV7KC7nbFoOYUgcPv/view?usp=sharing"> Select
       </label>
@@ -320,7 +321,7 @@ header h1 {
   <div class="card">
     <h3>Income Based Housing - Seniors 2025</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1_NsBXxZqzhnezskSrIAn-aZ6r2YO_rXw/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1_NsBXxZqzhnezskSrIAn-aZ6r2YO_rXw/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1_NsBXxZqzhnezskSrIAn-aZ6r2YO_rXw/view?usp=drive_link"> Select
       </label>
@@ -330,7 +331,7 @@ header h1 {
   <div class="card">
     <h3>Income Trust Application</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1NWfZefcbgrLk9v3ah_036Wdr_JCyHIXN/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1NWfZefcbgrLk9v3ah_036Wdr_JCyHIXN/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1NWfZefcbgrLk9v3ah_036Wdr_JCyHIXN/view?usp=drive_link"> Select
       </label>
@@ -340,7 +341,7 @@ header h1 {
   <div class="card">
     <h3>Instructions for Completing the Income Trust Form</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/1Tqd5OwC9_x1SBWkPNTLjZ9V0D5qLC8YG/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/1Tqd5OwC9_x1SBWkPNTLjZ9V0D5qLC8YG/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/1Tqd5OwC9_x1SBWkPNTLjZ9V0D5qLC8YG/view?usp=drive_link"> Select
       </label>
@@ -350,7 +351,7 @@ header h1 {
   <div class="card">
     <h3>LTC Medicaid Application</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/187hit7OET1BEYejH-ltZfqZmGGP8Mdy6/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/187hit7OET1BEYejH-ltZfqZmGGP8Mdy6/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/187hit7OET1BEYejH-ltZfqZmGGP8Mdy6/view?usp=drive_link"> Select
       </label>
@@ -360,7 +361,7 @@ header h1 {
   <div class="card">
     <h3>Medicaid One Pager Application</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/19eSfo4CAGHL-LafVcRb2kQ10w0W9C58W/view?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/19eSfo4CAGHL-LafVcRb2kQ10w0W9C58W/view?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/19eSfo4CAGHL-LafVcRb2kQ10w0W9C58W/view?usp=drive_link"> Select
       </label>
@@ -370,7 +371,7 @@ header h1 {
   <div class="card">
     <h3>Nursing Home List / Medicaid Long Term Care</h3>
     <div class="button-row">
-      <a href="https://drive.google.com/file/d/132JpSIaIiBrfnuvvhtVq0PxTjEI-G9Ld/view?usp=sharing" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://drive.google.com/file/d/132JpSIaIiBrfnuvvhtVq0PxTjEI-G9Ld/view?usp=sharing" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://drive.google.com/file/d/132JpSIaIiBrfnuvvhtVq0PxTjEI-G9Ld/view?usp=sharing"> Select
       </label>
@@ -380,7 +381,7 @@ header h1 {
   <div class="card">
     <h3>Medicaid Application Instructions</h3>
     <div class="button-row">
-      <a href="https://docs.google.com/document/d/1DfTigUZBvnwVXcctxprnxSrRicpv6C1G9oZ0z7ZH4f8/edit?usp=drive_link" target="_blank" class="action-button">Visit Form</a>
+      <a href="https://docs.google.com/document/d/1DfTigUZBvnwVXcctxprnxSrRicpv6C1G9oZ0z7ZH4f8/edit?usp=drive_link" target="_blank" class="action-button">Visit Document</a>
       <label class="form-checkbox-label">
         <input type="checkbox" class="form-checkbox" data-link="https://docs.google.com/document/d/1DfTigUZBvnwVXcctxprnxSrRicpv6C1G9oZ0z7ZH4f8/edit?usp=drive_link"> Select
       </label>
@@ -391,7 +392,60 @@ header h1 {
   <button id="copySelectedForms">Share Selected Links</button>
   <button id="copySelectedFormsText">Copy Links</button>
 </div>
+</div>
 
+<div id="varesources" class="page">
+  <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
+  <!-- VA Resources Cards -->
+  <div class="card">
+    <h3>VA Nursing Homes State & Federal</h3>
+    <div class="button-row">
+      <a href="https://drive.google.com/file/d/1cj4x4PedhK4YcT9k-LnGnSnO45JV1F24/view?usp=drive_link" target="_blank" class="action-button">Visit Resource</a>
+      <label class="form-checkbox-label">
+        <input type="checkbox" class="va-form-checkbox" data-link="https://drive.google.com/file/d/1cj4x4PedhK4YcT9k-LnGnSnO45JV1F24/view?usp=drive_link"> Select
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Links to VA Resources</h3>
+    <div class="button-row">
+      <a href="https://drive.google.com/file/d/1d_aFn5JI10ulhklgxPqKobSGdIod_kYx/view?usp=drive_link" target="_blank" class="action-button">Visit Resource</a>
+      <label class="form-checkbox-label">
+        <input type="checkbox" class="va-form-checkbox" data-link="https://drive.google.com/file/d/1d_aFn5JI10ulhklgxPqKobSGdIod_kYx/view?usp=drive_link"> Select
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <h3>CCNH Homes ECHS</h3>
+    <div class="button-row">
+      <a href="https://drive.google.com/file/d/1QRgaFev9bv6vEOKNhUpT_QO7ijluqqgL/view?usp=drive_link" target="_blank" class="action-button">Visit Resource</a>
+      <label class="form-checkbox-label">
+        <input type="checkbox" class="va-form-checkbox" data-link="https://drive.google.com/file/d/1QRgaFev9bv6vEOKNhUpT_QO7ijluqqgL/view?usp=drive_link"> Select
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Application 22214 Military Service Record</h3>
+    <div class="button-row">
+      <a href="https://drive.google.com/file/d/1fUpnbA-io-rM4EXuuWkBThSiXONKRrxF/view?usp=drive_link" target="_blank" class="action-button">Visit Resource</a>
+      <label class="form-checkbox-label">
+        <input type="checkbox" class="va-form-checkbox" data-link="https://drive.google.com/file/d/1fUpnbA-io-rM4EXuuWkBThSiXONKRrxF/view?usp=drive_link"> Select
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <h3>2024 VA - Aid and Attendance Flyer</h3>
+    <div class="button-row">
+      <a href="https://drive.google.com/file/d/1EHRiqbBlYlydKp-Rxc2MAYTu1swkzYkC/view?usp=drive_link" target="_blank" class="action-button">Visit Resource</a>
+      <label class="form-checkbox-label">
+        <input type="checkbox" class="va-form-checkbox" data-link="https://drive.google.com/file/d/1EHRiqbBlYlydKp-Rxc2MAYTu1swkzYkC/view?usp=drive_link"> Select
+      </label>
+    </div>
+  </div>
+  <div class="copy-forms-container">
+    <button id="copySelectedVAForms">Share Selected Links</button>
+    <button id="copySelectedVAFormsText">Copy Links</button>
+  </div>
 </div>
   
 <div id="disclosures" class="page">
@@ -442,7 +496,6 @@ header h1 {
   
 <div id="search" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-
   <div class="card">
     <h3>Search Resources</h3>
     <div class="search-bar">
@@ -450,7 +503,6 @@ header h1 {
       <button id="searchButton">Search</button>
     </div>
   </div>
-
   <div id="searchResults"></div>
 </div>
   
@@ -480,16 +532,15 @@ header h1 {
     });
   }
 
-  // --- Button Listeners for the Forms Page ---
+  // --- Button Listeners for the Low Income Documents Page ---
   const shareFormsButton = document.getElementById('copySelectedForms');
   const copyFormsTextButton = document.getElementById('copySelectedFormsText');
 
-  // Logic for the NEW "Copy Links" button
   if (copyFormsTextButton) {
     copyFormsTextButton.addEventListener('click', () => {
       const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
       if (checkedBoxes.length === 0) {
-        alert("Please select one or more forms to copy.");
+        alert("Please select one or more documents to copy.");
         return;
       }
       const links = Array.from(checkedBoxes).map(box => box.dataset.link);
@@ -501,29 +552,69 @@ header h1 {
     });
   }
 
-  // Logic for the "Share Links" button
   if (shareFormsButton) {
     shareFormsButton.addEventListener('click', () => {
       const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
       if (checkedBoxes.length === 0) {
-        alert("Please select one or more forms to share.");
+        alert("Please select one or more documents to share.");
         return;
       }
       const links = Array.from(checkedBoxes).map(box => box.dataset.link);
       const textToShare = "Here are the links you requested:\n" + links.join('\n');
-      
       if (navigator.share) {
         navigator.share({
-          title: 'Shared Form Links',
+          title: 'Shared Document Links',
           text: textToShare,
         })
         .then(() => {
-          console.log('Successful share');
           checkedBoxes.forEach(box => box.checked = false);
         })
         .catch((error) => console.log('Error sharing', error));
       } else {
-        // Informative fallback for browsers that don't support sharing
+        alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
+      }
+    });
+  }
+
+  // --- Button Listeners for the VA Resources Page ---
+  const shareVAFormsButton = document.getElementById('copySelectedVAForms');
+  const copyVAFormsTextButton = document.getElementById('copySelectedVAFormsText');
+
+  if (copyVAFormsTextButton) {
+    copyVAFormsTextButton.addEventListener('click', () => {
+      const checkedBoxes = document.querySelectorAll('#varesources .va-form-checkbox:checked');
+      if (checkedBoxes.length === 0) {
+        alert("Please select one or more VA resources to copy.");
+        return;
+      }
+      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+      const textToCopy = links.join('\n');
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert(`Copied ${links.length} link(s) to the clipboard.`);
+        checkedBoxes.forEach(box => box.checked = false);
+      });
+    });
+  }
+
+  if (shareVAFormsButton) {
+    shareVAFormsButton.addEventListener('click', () => {
+      const checkedBoxes = document.querySelectorAll('#varesources .va-form-checkbox:checked');
+      if (checkedBoxes.length === 0) {
+        alert("Please select one or more VA resources to share.");
+        return;
+      }
+      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
+      const textToShare = "Here are the VA resource links you requested:\n" + links.join('\n');
+      if (navigator.share) {
+        navigator.share({
+          title: 'Shared VA Resource Links',
+          text: textToShare,
+        })
+        .then(() => {
+          checkedBoxes.forEach(box => box.checked = false);
+        })
+        .catch((error) => console.log('Error sharing', error));
+      } else {
         alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
       }
     });
@@ -742,7 +833,7 @@ header h1 {
     });
     document.getElementById(id).classList.add('visible');
     
-    const pagesWithBackButton = ['resources', 'favorites', 'disclosures', 'forms', 'search'];
+    const pagesWithBackButton = ['resources', 'favorites', 'disclosures', 'forms', 'varesources', 'search'];
     if (pagesWithBackButton.includes(id)) {
       const header = document.getElementById('main-header');
       const backButton = document.querySelector(`#${id} .back-button`);
