@@ -53,13 +53,19 @@
       cursor: pointer;
       width: 280px;
     }
-    /* --- Two column grid for all resource displays --- */
+
+    /* Constrain grid width for desktop readability */
+    .grid-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
     .category-row,
     .search-category-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       position: relative;
+      width: 100%;
     }
     .category-block,
     .search-category-block {
@@ -94,7 +100,6 @@
       cursor: pointer;
       color: gold;
     }
-    /* Full-width resource panel when expanded */
     .resources-wrapper,
     .search-resources-wrapper {
       display: none;
@@ -270,14 +275,14 @@
 
 <div id="resources" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div id="resourceContent"></div>
+  <div class="grid-wrapper"><div id="resourceContent"></div></div>
 </div>
 
 <div id="forms" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <!-- (Keep your full forms HTML here) -->
-  <!-- ... (unchanged - as in your original file) ... -->
-  <!-- For brevity, not repeated here, but should be identical to your previous version! -->
+  <!-- ALL your low income docs cards go here (as in your original file) -->
+  <!-- ... (copy your full forms HTML from your original file here) ... -->
+  <!-- Example for one, repeat for all: -->
   <div class="card">
     <h3>2024 AAA Colorado Adult Medicaid Programs</h3>
     <div class="button-row">
@@ -287,7 +292,7 @@
       </label>
     </div>
   </div>
-  <!-- (Repeat for other forms...) -->
+  <!-- (repeat all your other cards here) -->
   <div class="copy-forms-container">
     <button id="copySelectedForms">Share Selected Links</button>
     <button id="copySelectedFormsText">Copy Links</button>
@@ -296,8 +301,8 @@
 
 <div id="varesources" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <!-- (Keep your full VA resources HTML here) -->
-  <!-- ... (unchanged - as in your original file) ... -->
+  <!-- ALL your VA resources cards go here (as in your original file) -->
+  <!-- ... (copy your full VA resources HTML from your original file here) ... -->
   <div class="card">
     <h3>VA Nursing Homes State & Federal</h3>
     <div class="button-row">
@@ -307,7 +312,7 @@
       </label>
     </div>
   </div>
-  <!-- (Repeat for other VA cards...) -->
+  <!-- (repeat all your other VA resource cards here) -->
   <div class="copy-forms-container">
     <button id="copySelectedVAForms">Share Selected Links</button>
     <button id="copySelectedVAFormsText">Copy Links</button>
@@ -316,8 +321,8 @@
   
 <div id="disclosures" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <!-- (Keep your full disclosures HTML here) -->
-  <!-- ... (unchanged - as in your original file) ... -->
+  <!-- ALL your disclosures cards go here (as in your original file) -->
+  <!-- ... (copy your full disclosures HTML from your original file here) ... -->
   <div class="card">
     <h3>General Disclosure</h3>
     <div class="button-row">
@@ -325,14 +330,14 @@
       <button class="copy-button" onclick="copyText('https://fs11.formsite.com/5LkyVC/sjuyzngbeg/index')">Copy Link</button>
     </div>
   </div>
-  <!-- (Repeat for other disclosures...) -->
+  <!-- (repeat all your other disclosure cards here) -->
 </div>
 
 <div id="favorites" class="page">
   <div class="back-button" onclick="showPage('home')">🏠 Back to Home</div>
-  <div id="favoritesContent">
+  <div class="grid-wrapper"><div id="favoritesContent">
     <p>Loading favorites...</p>
-  </div>
+  </div></div>
 </div>
   
 <div id="search" class="page">
@@ -344,7 +349,7 @@
       <button id="searchButton">Search</button>
     </div>
   </div>
-  <div id="searchResults"></div>
+  <div class="grid-wrapper"><div id="searchResults"></div></div>
 </div>
   
 <script>
@@ -544,7 +549,8 @@ function loadResources() {
       });
 
     catDiv.addEventListener("click", () => {
-      // Collapse all expanded blocks
+      // Toggle expand/collapse
+      const expanded = block.classList.contains("expanded");
       document.querySelectorAll(".category-block.expanded").forEach(expandedBlock => {
         expandedBlock.classList.remove("expanded");
         const resources = expandedBlock.querySelector(".resources-wrapper");
@@ -552,10 +558,11 @@ function loadResources() {
         const category = expandedBlock.querySelector(".category");
         if (category) category.classList.remove("active");
       });
-      // Expand clicked one
-      block.classList.add("expanded");
-      wrapper.style.display = "block";
-      catDiv.classList.add("active");
+      if (!expanded) {
+        block.classList.add("expanded");
+        wrapper.style.display = "block";
+        catDiv.classList.add("active");
+      } // If collapsing, leave all closed
     });
 
     block.appendChild(catDiv);
@@ -609,6 +616,8 @@ function performSearch() {
       });
 
     catDiv.addEventListener("click", () => {
+      // Toggle expand/collapse
+      const expanded = block.classList.contains("expanded");
       document.querySelectorAll(".search-category-block.expanded").forEach(expandedBlock => {
         expandedBlock.classList.remove("expanded");
         const resources = expandedBlock.querySelector(".search-resources-wrapper");
@@ -616,9 +625,11 @@ function performSearch() {
         const category = expandedBlock.querySelector(".search-category");
         if (category) category.classList.remove("active");
       });
-      block.classList.add("expanded");
-      wrapper.style.display = "block";
-      catDiv.classList.add("active");
+      if (!expanded) {
+        block.classList.add("expanded");
+        wrapper.style.display = "block";
+        catDiv.classList.add("active");
+      }
     });
 
     block.appendChild(catDiv);
@@ -696,6 +707,8 @@ function loadFavorites() {
       });
 
     catDiv.addEventListener("click", () => {
+      // Toggle expand/collapse
+      const expanded = block.classList.contains("expanded");
       document.querySelectorAll(".category-block.expanded").forEach(expandedBlock => {
         expandedBlock.classList.remove("expanded");
         const resources = expandedBlock.querySelector(".resources-wrapper");
@@ -703,9 +716,11 @@ function loadFavorites() {
         const category = expandedBlock.querySelector(".category");
         if (category) category.classList.remove("active");
       });
-      block.classList.add("expanded");
-      wrapper.style.display = "block";
-      catDiv.classList.add("active");
+      if (!expanded) {
+        block.classList.add("expanded");
+        wrapper.style.display = "block";
+        catDiv.classList.add("active");
+      }
     });
 
     block.appendChild(catDiv);
