@@ -11,24 +11,24 @@
       background: url('bg-tile.jpg');
       background-size: 300px 300px;
     }
-header {
-  background: #000;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-header img {
-  width: 3in;
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-header h1 {
-  margin-top: 10px;
-}
+    header {
+      background: #000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      width: 3in;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    header h1 {
+      margin-top: 10px;
+    }
     .page {
       display: none;
       padding: 20px;
@@ -55,6 +55,7 @@ header h1 {
       text-align: center;
       text-decoration: none;
       display: block;
+      box-sizing: border-box;
     }
     .category-row {
       display: flex;
@@ -259,7 +260,7 @@ header h1 {
   <button onclick="showPage('varesources')">VA Resources</button>
   <button onclick="showPage('disclosures')">Disclosures</button>
   <!-- New Commitment Made Button -->
-  <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSf0mp6Mo2UhWrpg0S_pSaamZoi8sVK3Ublzp_cUGbtd_Xeslg/viewform?usp=header', '_blank')">Commitment Made</button>
+  <button id="commitmentBtn">Commitment Made</button>
   <button onclick="showPage('search')">Search</button>
   <button onclick="showPage('favorites')">⭐ My Favorites</button>
   <button onclick="copyText('Your feedback means a lot! Leave us a quick Google review here: https://g.page/r/CVXT-a832BjDEAE/review')">Share Google Link</button>
@@ -510,7 +511,7 @@ header h1 {
   </div>
   <div id="searchResults"></div>
 </div>
-  
+
 <script>
   let allResources = [];
 
@@ -537,7 +538,7 @@ header h1 {
     });
   }
 
-  // --- Button Listeners for the Low Income Documents Page ---
+ // --- Button Listeners for the Low Income Documents Page ---
   const shareFormsButton = document.getElementById('copySelectedForms');
   const copyFormsTextButton = document.getElementById('copySelectedFormsText');
 
@@ -581,8 +582,7 @@ header h1 {
     });
   }
 
-  // --- Button Listeners for the VA Resources Page ---
-  const shareVAFormsButton = document.getElementById('copySelectedVAForms');
+   const shareVAFormsButton = document.getElementById('copySelectedVAForms');
   const copyVAFormsTextButton = document.getElementById('copySelectedVAFormsText');
 
   if (copyVAFormsTextButton) {
@@ -850,6 +850,31 @@ header h1 {
     if (id === 'resources') loadResources();
     if (id === 'favorites') loadFavorites();
   }
+    const commitmentBtn = document.getElementById('commitmentBtn');
+  if (commitmentBtn) {
+    commitmentBtn.addEventListener('click', () => {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSf0mp6Mo2UhWrpg0S_pSaamZoi8sVK3Ublzp_cUGbtd_Xeslg/viewform?usp=header', '_blank');
+    });
+  }
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+  let allResources = [];
+
+  fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+      allResources = data;
+      console.log("Resources loaded and ready.");
+    })
+    .catch(error => console.error("Error fetching data:", error));
+
+ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
