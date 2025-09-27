@@ -115,7 +115,7 @@
     "Category": "Counselors/Mental Health",
     "Name": "Family Care Center",
     "Website": "https://fccwellbeing.com/",
-    "Phone": "(719)416-4396",
+    "Phone": "(719) 416-4396",
     "Description": "Wide range of Mental Health services statewide. Veteran owned. Some gerontolgy specialists. No Medicaid. ",
     "Address": null
   },
@@ -138,7 +138,7 @@
   {
     "Category": "DME",
     "Name": "Affordable Medical Supply",
-    "Website": "Affordablemedmart.com",
+    "Website": "http://affordablemedmart.com/",
     "Phone": "(719) 632-4036",
     "Description": "Medical Equipment- Wheelchairs etc..",
     "Address": "1833 N Circle Dr, Colorado Springs, CO 80909"
@@ -162,7 +162,7 @@
   {
     "Category": "Downsizing & Organizing",
     "Name": "Gale Force Organizers",
-    "Website": "www.galeforceorganizers.com",
+    "Website": "https://galeforceorganizers.com/",
     "Phone": "(719) 653-5610",
     "Description": null,
     "Address": "Colorado Springs, CO"
@@ -227,7 +227,7 @@
     "Category": "Estate Sales / Moving",
     "Name": "A Call to Order",
     "Website": "https://www.acalltoorderco.com",
-    "Phone": " (719) 231-5425",
+    "Phone": "(719) 231-5425",
     "Description": "Senior-focused organizing and relocation",
     "Address": "Colorado Springs, CO"
   },
