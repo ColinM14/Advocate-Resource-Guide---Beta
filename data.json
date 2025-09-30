@@ -473,7 +473,7 @@
   },
   {
     "Category": "Notary",
-    "Name": "Patty\u2019s Mobile Notary Service",
+    "Name": "Patty's Mobile Notary Service",
     "Website": "www.pattythenotary.com",
     "Phone": "(719) 459-0300",
     "Description": "She can come to you within 24-48 hrs. Prices vary from $45-$100. She has POA forms.\nSenior must have current ID",
@@ -646,5 +646,37 @@
     "Phone": "(719) 621-9111 ",
     "Description": "Provides VA-contracted in-home support and personal care services.",
     "Address": "1216 W Colorado Ave, COS"
+  },
+   {
+    "Category": "Transitional Care/Rounding Physicians",
+    "Name": "Pikes Peak Discharge Clinic",
+    "Website": "https://peakdischarge.org/",
+    "Phone": "(719) 247-2532",
+    "Description": "Provides transitional care for patients between appointments. Does not seek to replace the PCP. Can support urgent PPOCs",
+    "Address": ""
+  },
+  {
+    "Category": "Transitional Care/Rounding Physicians",
+    "Name": "Bloom Healthcare",
+    "Website": "https://bloomhealthcare.com",
+    "Phone": "(720) 923-1300",
+    "Description": "Palliative care services and chronic condition support for seniors. Can support urgent PPOCs",
+    "Address": "Serves Colorado Springs"
+  },
+  {
+    "Category": "Home Health",
+    "Name": "Enhabit Home Health and Hospice",
+    "Website": "https://www.ehab.com/",
+    "Phone": "(719) 265-6931",
+    "Description": "",
+    "Address": "910 Pinon Ranch View Suite 211, Colorado Springs, CO 80907"
+  },
+  {
+    "Category": "Home Health",
+    "Name": "At Home Healthcare",
+    "Website": "https://lhcgroup.com/locations/at-home-healthcare-of-colorado-springs/?utm_source=GMB&utm_campaign=Google_Local_Listing&utm_medium=referral&utm_content=At_Home_Healthcare_Colorado_Springs",
+    "Phone": "(719) 578-9900",
+    "Description": "Provides skilled nursing, physical therapy, and other in-home health services.",
+    "Address": "1115 Elkton Dr Suite 300, Colorado Springs, CO 80907"
   }
 ]
