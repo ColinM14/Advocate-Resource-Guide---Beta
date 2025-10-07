@@ -653,8 +653,8 @@ function createResourceCard(resource) {
     ${hasAddress ? `<p><strong>Address:</strong> ${resource.Address}</p>` : ""}
     ${hasDescription ? `<p>${resource.Description}</p>` : ""}
     <div class="button-row">
-      ${hasPhone ? `<button class="copy-button" onclick="copyText('${resource.Name}: ${resource.Phone}')">Copy Phone</button>` : ""}
-      ${hasWebsite ? `<button class="copy-button" onclick="copyText('${resource.Website}')">Copy Website</button>` : ""}
+      ${hasPhone ? `<button class="copy-button" onclick="copyText('${resource.Name}\\n${resource.Website}')">Copy Website</button>` : ""}
+      ${hasWebsite ? `<button class="copy-button" onclick="copyText('${resource.Name}\\n${resource.Website}')">Copy Website</button>` : ""}
     </div>
   `;
   return card;
