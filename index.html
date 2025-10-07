@@ -549,91 +549,117 @@ commitmentBtn.addEventListener('click', () => {
       if (event.key === 'Enter') performSearch();
     });
   }
- // --- Button Listeners for the Low Income Documents Page ---
- const shareFormsButton = document.getElementById('copySelectedForms');
-  const copyFormsTextButton = document.getElementById('copySelectedFormsText');
-  if (copyFormsTextButton) {
-    copyFormsTextButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more documents to copy.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToCopy = links.join('\n');
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        alert(`Copied ${links.length} link(s) to the clipboard.`);
-        checkedBoxes.forEach(box => box.checked = false);
-      });
-    });
-  }
-  if (shareFormsButton) {
-    shareFormsButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more documents to share.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToShare = "Here are the links you requested:\n" + links.join('\n');
-      if (navigator.share) {
-        navigator.share({
-          title: 'Shared Document Links',
-          text: textToShare,
-        })
-        .then(() => {
-          checkedBoxes.forEach(box => box.checked = false);
-        })
-        .catch((error) => console.log('Error sharing', error));
-      } else {
-        alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
-      }
-    });
-  }
+// --- Button Listeners for the Low Income Documents Page ---
+const shareFormsButton = document.getElementById('copySelectedForms');
+const copyFormsTextButton = document.getElementById('copySelectedFormsText');
 
-  // VA Resources Page listeners
-  const shareVAFormsButton = document.getElementById('copySelectedVAForms');
-  const copyVAFormsTextButton = document.getElementById('copySelectedVAFormsText');
-  if (copyVAFormsTextButton) {
-    copyVAFormsTextButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#varesources .va-form-checkbox:checked');
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more VA resources to copy.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToCopy = links.join('\n');
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        alert(`Copied ${links.length} link(s) to the clipboard.`);
-        checkedBoxes.forEach(box => box.checked = false);
-      });
+if (copyFormsTextButton) {
+  copyFormsTextButton.addEventListener('click', () => {
+    const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+      alert("Please select one or more documents to copy.");
+      return;
+    }
+    const linkLines = Array.from(checkedBoxes).map(box => {
+      const card = box.closest('.card');
+      const h3 = card ? card.querySelector('h3') : null;
+      const name = h3 ? h3.innerText : "Resource";
+      const link = box.dataset.link;
+      return `${name}: ${link}`;
     });
-  }
-   if (shareVAFormsButton) {
-    shareVAFormsButton.addEventListener('click', () => {
-      const checkedBoxes = document.querySelectorAll('#varesources .va-form-checkbox:checked');
-      if (checkedBoxes.length === 0) {
-        alert("Please select one or more VA resources to share.");
-        return;
-      }
-      const links = Array.from(checkedBoxes).map(box => box.dataset.link);
-      const textToShare = "Here are the VA resource links you requested:\n" + links.join('\n');
-      if (navigator.share) {
-        navigator.share({
-          title: 'Shared VA Resource Links',
-          text: textToShare,
-        })
-        .then(() => {
-          checkedBoxes.forEach(box => box.checked = false);
-        })
-        .catch((error) => console.log('Error sharing', error));
-      } else {
-        alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
-      }
+    const textToCopy = linkLines.join('\n');
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      alert(`Copied ${linkLines.length} link(s) to the clipboard.`);
+      checkedBoxes.forEach(box => box.checked = false);
     });
-  }
-});
+  });
+}
 
+if (shareFormsButton) {
+  shareFormsButton.addEventListener('click', () => {
+    const checkedBoxes = document.querySelectorAll('#forms .form-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+      alert("Please select one or more documents to share.");
+      return;
+    }
+    const linkLines = Array.from(checkedBoxes).map(box => {
+      const card = box.closest('.card');
+      const h3 = card ? card.querySelector('h3') : null;
+      const name = h3 ? h3.innerText : "Resource";
+      const link = box.dataset.link;
+      return `${name}: ${link}`;
+    });
+    const textToShare = "Here are the links you requested:\n" + linkLines.join('\n');
+    if (navigator.share) {
+      navigator.share({
+        title: 'Shared Document Links',
+        text: textToShare,
+      })
+      .then(() => {
+        checkedBoxes.forEach(box => box.checked = false);
+      })
+      .catch((error) => console.log('Error sharing', error));
+    } else {
+      alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
+    }
+  });
+}
+
+// --- Button Listeners for the VA Resources Page ---
+const shareVAFormsButton = document.getElementById('copySelectedVAForms');
+const copyVAFormsTextButton = document.getElementById('copySelectedVAFormsText');
+
+if (copyVAFormsTextButton) {
+  copyVAFormsTextButton.addEventListener('click', () => {
+    const checkedBoxes = document.querySelectorAll('#varesources .va-form-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+      alert("Please select one or more VA resources to copy.");
+      return;
+    }
+    const linkLines = Array.from(checkedBoxes).map(box => {
+      const card = box.closest('.card');
+      const h3 = card ? card.querySelector('h3') : null;
+      const name = h3 ? h3.innerText : "Resource";
+      const link = box.dataset.link;
+      return `${name}: ${link}`;
+    });
+    const textToCopy = linkLines.join('\n');
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      alert(`Copied ${linkLines.length} link(s) to the clipboard.`);
+      checkedBoxes.forEach(box => box.checked = false);
+    });
+  });
+}
+
+if (shareVAFormsButton) {
+  shareVAFormsButton.addEventListener('click', () => {
+    const checkedBoxes = document.querySelectorAll('#varesources .va-form-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+      alert("Please select one or more VA resources to share.");
+      return;
+    }
+    const linkLines = Array.from(checkedBoxes).map(box => {
+      const card = box.closest('.card');
+      const h3 = card ? card.querySelector('h3') : null;
+      const name = h3 ? h3.innerText : "Resource";
+      const link = box.dataset.link;
+      return `${name}: ${link}`;
+    });
+    const textToShare = "Here are the VA resource links you requested:\n" + linkLines.join('\n');
+    if (navigator.share) {
+      navigator.share({
+        title: 'Shared VA Resource Links',
+        text: textToShare,
+      })
+      .then(() => {
+        checkedBoxes.forEach(box => box.checked = false);
+      })
+      .catch((error) => console.log('Error sharing', error));
+    } else {
+      alert("Share feature not available on this browser. Use the 'Copy Links' button instead.");
+    }
+  });
+}
 // Utility functions
 function copyText(text) {
   navigator.clipboard.writeText(text).then(() => alert("Copied: " + text));
