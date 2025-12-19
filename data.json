@@ -1,7 +1,7 @@
 [
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Adult Day Care",
     "Name": "Jackson Creek - Adult Day Care",
     "Website": "https://jacksoncreekseniorliving.com/day-retreat/",
@@ -11,8 +11,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Adult Day Care",
     "Name": "Second Home Adult Day Care",
     "Website": "https://secondhomeadc.com/",
@@ -22,8 +22,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Adult Day Care",
     "Name": "Meridian Adult Day Center",
     "Website": "https://meridiancolorado.com/",
@@ -33,8 +33,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Adult Day Care",
     "Name": "Voyages Adult Day Center",
     "Website": "https://goodwillcolorado.org/services/voyages/",
@@ -44,10 +44,10 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Bridge Loans",
-    "Name": "Second Act Finullcial Services",
+    "Name": "Second Act Financial Services",
     "Website": "https://secondact.com",
     "Phone": "(888) 999-7372",
     "Description": "Provides short-term bridge loans to help seniors afford care while waiting for other funding.",
@@ -55,8 +55,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Caregiver Support",
     "Name": "UCCS Aging Center / Lane Center",
     "Website": "https://healthcircle.uccs.edu/aging-center",
@@ -66,10 +66,10 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Caregiver Support",
-    "Name": "Alzheimer\u2019s Association",
+    "Name": "Alzheimers Association",
     "Website": "https://alz.org/co",
     "Phone": "24/7 Helpline: (800) 272-3900",
     "Description": "Education, support groups, and resources for families navigating Alzheimer\u2019s or dementia.",
@@ -77,8 +77,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Caregiver Support",
     "Name": "Parkinson\u2019s Association of the Rockies",
     "Website": "https://parkinsonrockies.org",
@@ -88,8 +88,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Caregiver Support",
     "Name": "Never Alone Consulting",
     "Website": "https://www.neveraloneconsulting.com/",
@@ -99,8 +99,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "**CarePatrol Links**",
     "Name": "Caregiver Calendar",
     "Website": "https://lp.constantcontactpages.com/sl/FLRqGEs/caregiverresourcecalendar",
@@ -110,8 +110,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "**CarePatrol Links**",
     "Name": "Events Page",
     "Website": "https://carepatrol.com/colorado-springs-pueblo/events/",
@@ -121,8 +121,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "**CarePatrol Links**",
     "Name": "October Event 10/29",
     "Website": "https://carepatrol.com/colorado-springs-pueblo/events/how-are-you-going-to-pay-for-that/",
@@ -132,8 +132,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "**CarePatrol Links**",
     "Name": "Senior Resource Guide",
     "Website": "https://linktr.ee/carepatrol_seniorguide",
@@ -143,8 +143,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Counselors/Mental Health",
     "Name": "Own Path",
     "Website": "https://ownpath.co",
@@ -154,8 +154,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Counselors/Mental Health",
     "Name": "Family Care Center",
     "Website": "https://fccwellbeing.com/",
@@ -165,8 +165,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "DME",
     "Name": "Silver Key ",
     "Website": "https://www.silverkey.org/",
@@ -176,8 +176,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "DME",
     "Name": "Advanced Medical Solutions",
     "Website": "https://www.amsdme.com/",
@@ -187,8 +187,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "DME",
     "Name": "Affordable Medical Supply",
     "Website": "http://affordablemedmart.com/",
@@ -198,8 +198,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "DME",
     "Name": "Go Mobility",
     "Website": "https://gomobilityonline.com/",
@@ -209,8 +209,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Downsizing & Organizing",
     "Name": "All Things Senior Transitions",
     "Website": "https://atstransitions.com/",
@@ -220,8 +220,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Downsizing & Organizing",
     "Name": "Gale Force Organizers",
     "Website": "https://galeforceorganizers.com/",
@@ -231,8 +231,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Elder Law Attorney",
     "Name": "Morey Law, P.C",
     "Website": "https://moreylawpc.com",
@@ -242,8 +242,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Elder Law Attorney",
     "Name": "Kirtland & Seal LLC",
     "Website": "https://kirtlandseal.com",
@@ -253,8 +253,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Elder Law Attorney",
     "Name": "Forbush Legal, PLLC",
     "Website": "https://forbushlegal.com",
@@ -264,8 +264,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Elder Law Attorney",
     "Name": "Hammond Law Group PC",
     "Website": "https://coloradoestateplan.com",
@@ -275,8 +275,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Elder Law Attorney",
     "Name": "Vinton Law Firm, P.C",
     "Website": "https://thevintonlawfirm.com/",
@@ -286,8 +286,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Estate Sales / Moving",
     "Name": "Caring Transitions",
     "Website": "https://www.caringtransitionscoloradosprings.com/",
@@ -297,8 +297,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Estate Sales / Moving",
     "Name": "Things Forgotten But Not Gone",
     "Website": "https://goodwillcolorado.org/services/things-forgotten-not-gone/things-forgotten-about-us/",
@@ -308,8 +308,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Estate Sales / Moving",
     "Name": "A Call to Order",
     "Website": "https://www.acalltoorderco.com",
@@ -319,9 +319,9 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
-    "Category": "Finullcial ",
+    "Home Page": false,
+    "Type": "Resource",
+    "Category": "Financial ",
     "Name": "Beneficent",
     "Website": "https://www.doinggoodforothers.com/",
     "Phone": "(719) 645-8350",
@@ -330,8 +330,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Furniture Rental",
     "Name": "Cort",
     "Website": "https://www.cort.com/furniture-rental?gad_source=1&gad_campaignid=21199548160&gclid=CjwKCAjw89jGBhB0EiwA2o1OnzofaERi6l_CK3a4tGzfw245P6d7lB53foPAbaqLiInSUaL0RIFccBoCBRYQAvD_BwE",
@@ -341,8 +341,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Furniture Rental",
     "Name": "Aarons",
     "Website": "https://www.aarons.com/locations/us/co/colorado-springs/1330-n-academy-blvd",
@@ -352,8 +352,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Guardian / Conservator",
     "Name": "Care Planners, Inc.",
     "Website": null,
@@ -363,8 +363,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Guardian / Conservator",
     "Name": "Colorado Guardian Manual",
     "Website": "https://www.courts.state.co.us/userfiles/file/Self_Help/Probate/GuardianManual.pdf",
@@ -374,8 +374,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Guardian / Conservator",
     "Name": "Colorado Guardian/Conservator",
     "Website": "https://www.coloradojudicial.gov/taxonomy/term/450?resource_type=450",
@@ -385,8 +385,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Care",
     "Name": "Comfort Keepers",
     "Website": "https://www.gentleshepherdhomecare.com/",
@@ -396,8 +396,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Care",
     "Name": "Cornerstone",
     "Website": "https://cornerstonecaregiving.com/locations/colorado-springs-co/?utm_source=google&utm_medium=yext",
@@ -407,8 +407,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Care",
     "Name": "Porchlight Friends",
     "Website": "https://www.porchlightfriends.org/",
@@ -418,8 +418,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Care",
     "Name": "Home Instead",
     "Website": "https://www.homeinstead.com/home-care/usa/co/colorado-springs/111/?utm_source=google&utm_medium=organic&utm_campaign=google_organic_businesslisting_y",
@@ -429,8 +429,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Care",
     "Name": "Synergy",
     "Website": "https://synergyhomecare.com/co-colorado-springs-80903/",
@@ -440,8 +440,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Modifications",
     "Name": "HomeStretch",
     "Website": "https://www.home-stretch.com/locations/co/cos/",
@@ -451,8 +451,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Modifications",
     "Name": "Lifeway Mobility",
     "Website": "https://www.lifewaymobility.com",
@@ -462,8 +462,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Modifications",
     "Name": "Adaptive Mobility",
     "Website": "https://www.adaptivemobilityusa.com/",
@@ -473,8 +473,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Homeless Resources",
     "Name": "Gospel Homes for Women",
     "Website": "https://gospelhomesforwomen.org",
@@ -484,8 +484,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Homeless Resources",
     "Name": "Homeward Pikes Peak",
     "Website": "https://homewardpp.org",
@@ -495,8 +495,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Homeless Resources",
     "Name": "Homefront Military Network",
     "Website": "https://homefrontmilitarynetwork.org",
@@ -506,8 +506,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Homeless Resources",
     "Name": "Bijou House",
     "Website": null,
@@ -517,8 +517,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Homeless Resources",
     "Name": "Salvation Army New Hope Center",
     "Website": "https://coloradosprings.salvationarmy.org/",
@@ -528,8 +528,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Homeless Resources",
     "Name": "Springs Rescue Mission",
     "Website": "https://springsrescuemission.org",
@@ -539,8 +539,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Housecleaners",
     "Name": "Luciana Gomes",
     "Website": null,
@@ -550,8 +550,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Housecleaners",
     "Name": "Merry Maids",
     "Website": "https://www.merrymaids.com/colorado-springs/",
@@ -561,8 +561,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Housecleaners",
     "Name": "Melissa May",
     "Website": null,
@@ -572,8 +572,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Housecleaners",
     "Name": "Integrity Cleaning Sevices",
     "Website": "https://integritycleanings.com/?utm_source=google_business_profile&utm_medium=organic&utm_campaign=google",
@@ -583,8 +583,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Medicaid Application",
     "Name": "Metro Medicaid Consultants",
     "Website": "http://colorado-medicaid-consultants.com/",
@@ -594,8 +594,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Mobile Grooming",
     "Name": "The ToeNail Guy",
     "Website": "https://thetoenailguy.com",
@@ -605,8 +605,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Mobile Wound Services",
     "Name": "Compassionate Concierge Physicians",
     "Website": "https://www.compassionateconciergephysicians.com/",
@@ -616,8 +616,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Mobile Wound Services",
     "Name": "Front Range Medical Associates",
     "Website": "https://frontrangemedical.net/",
@@ -627,8 +627,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Mobile Wound Services",
     "Name": "Maher Wound Care",
     "Website": "https://maherrehabsolutions.com/services/wound-care/",
@@ -638,8 +638,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Mobile Wound Services",
     "Name": "Mend Wound Care",
     "Website": "https://www.mendmywound.com/",
@@ -649,8 +649,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Movers Only",
     "Name": "New Horizon",
     "Website": "https://www.newhorizonmm.com/",
@@ -660,8 +660,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Movers Only",
     "Name": "Little Red Wagon Moving",
     "Website": "https://littleredwagonmoving.com",
@@ -671,8 +671,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Movers Only",
     "Name": "Two Men and a Truck",
     "Website": "https://twomenulldatruck.com/local-movers/co/colorado-springs",
@@ -682,8 +682,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Notary",
     "Name": "Patty\u2019s Mobile Notary Service",
     "Website": "www.pattythenotary.com",
@@ -693,19 +693,19 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Notary",
     "Name": "Monica Ouphasakda",
     "Website": null,
     "Phone": "(719) 484-9444",
-    "Description": " Mobile Notary with very low fees, only $20 per stamp, depending on location/mileage might be an additional $10. Carried finullcial POA and MDPOA and other general notary forms. MDPOA not required to be notarized in Colorado but she carries them anyway. ",
+    "Description": " Mobile Notary with very low fees, only $20 per stamp, depending on location/mileage might be an additional $10. Carried Financial POA and MDPOA and other general notary forms. MDPOA not required to be notarized in Colorado but she carries them anyway. ",
     "Address": "Colorado Springs, CO",
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "PACE",
     "Name": "Intake contact- Christina Barrier",
     "Website": null,
@@ -715,8 +715,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "PACE",
     "Name": "Website",
     "Website": "https://rmpace.org/",
@@ -726,8 +726,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Hospice/Palliative",
     "Name": "Bloom Healthcare",
     "Website": "https://bloomhealthcare.com",
@@ -737,8 +737,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Hospice/Palliative",
     "Name": "Pikes Peak Hospice and Palliative Care",
     "Website": "https://pikespeakhospice.org/",
@@ -748,8 +748,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Hospice/Palliative",
     "Name": "Compassus ",
     "Website": "https://www.compassus.com/locations/colorado/colorado-springs/",
@@ -759,8 +759,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Private Duty Nursing",
     "Name": "Aveanna Healthcare",
     "Website": "https://www.aveanna.com",
@@ -770,8 +770,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Private Duty Nursing",
     "Name": "Amazing Care Home Health",
     "Website": "https://amazingcare.com",
@@ -781,8 +781,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Private Duty Nursing",
     "Name": "Heart and Soul Nursing",
     "Website": "https://www.heartandsoulnursing.com",
@@ -792,8 +792,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Realtors",
     "Name": "Shari Hall",
     "Website": "https://sharihall.fathomrealty.com/",
@@ -803,8 +803,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Realtors",
     "Name": "Caryn Becker, Colorado Springs Realtor",
     "Website": "https://carynbeckerhomes.com",
@@ -814,8 +814,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (In State)",
     "Name": "Beo Mobility",
     "Website": "https://beopersonalcare.com/transportation/",
@@ -825,8 +825,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (In State)",
     "Name": "The Way",
     "Website": "https://asteriems.com/the-way/",
@@ -836,8 +836,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (In State)",
     "Name": "Goodwheels",
     "Website": "https://goodwillcolorado.org/services/community-transportation/",
@@ -847,8 +847,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (In State)",
     "Name": "Asteri EMS",
     "Website": "https://asteriems.com/",
@@ -858,8 +858,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (Out of State)",
     "Name": "AMR",
     "Website": "https://amr.net",
@@ -869,8 +869,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (Out of State)",
     "Name": "ToppFlight",
     "Website": "https://toppflight.com",
@@ -880,8 +880,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transport (Out of State)",
     "Name": "ACC Medlink",
     "Website": "https://accmedlink.com",
@@ -891,8 +891,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "VA Specific",
     "Name": "Long Term Assurance (A&A)",
     "Website": "https://ltainfo.com/",
@@ -902,8 +902,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "VA Specific",
     "Name": "Belinda Jackson VA accredited attorney ",
     "Website": "https://www.americanveteransaid.org/",
@@ -913,8 +913,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "VA Specific",
     "Name": "Veteran Service Group (Home Care)",
     "Website": "https://www.veteranservicegroup.com",
@@ -924,8 +924,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "VA Specific",
     "Name": "USA Benfits For All, LLC",
     "Website": "www.usabenefitsforveterans.com",
@@ -935,8 +935,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transitional Care/Rounding Physicians",
     "Name": "Pikes Peak Discharge Clinic",
     "Website": "https://peakdischarge.org/",
@@ -946,8 +946,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Transitional Care/Rounding Physicians",
     "Name": "Bloom Healthcare",
     "Website": "https://bloomhealthcare.com",
@@ -957,8 +957,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Health",
     "Name": "Enhabit Home Health and Hospice",
     "Website": "https://www.ehab.com/",
@@ -968,8 +968,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Health",
     "Name": "At Home Healthcare",
     "Website": "https://lhcgroup.com/locations/at-home-healthcare-of-colorado-springs/?utm_source=GMB&utm_campaign=Google_Local_Listing&utm_medium=referral&utm_content=At_Home_Healthcare_Colorado_Springs_CO_80910",
@@ -979,8 +979,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Home Health",
     "Name": "CenterWell Home Health",
     "Website": "https://www.centerwellhomehealth.com/about-us/find-care-near-you/h237/centerwell-home-health-colorado-springs?utm_source=Organic&utm_medium=GBP",
@@ -990,8 +990,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "PPOCs",
     "Name": "Bethesda Gardens",
     "Website": "https://drive.google.com/file/d/1LPuY_mNZ-DDA62q-zcRBHehgDLqpMmms/view?usp=sharing",
@@ -1001,8 +1001,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "PPOCs",
     "Name": "Bonaventure Physicians Orders",
     "Website": "https://drive.google.com/file/d/1lT_JvBmViYZQQscZZH-AvshBZw6CG-09/view?usp=sharing",
@@ -1012,8 +1012,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "PPOCs",
     "Name": "Brookdale ",
     "Website": null,
@@ -1023,8 +1023,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "PPOCs",
     "Name": "Brookdale Secured Form",
     "Website": null,
@@ -1034,8 +1034,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Family Tools",
     "Name": "Touring Tips",
     "Website": "https://drive.google.com/file/d/1TOyRLyZTjMCzCOAl8RRGaY8Ojj19yHYP/view?usp=drive_link",
@@ -1045,8 +1045,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Family Tools",
     "Name": "Touring Checklist",
     "Website": "https://drive.google.com/file/d/1q-SlRTQPeppEkWHHRGO4WP1MiKg7NGFL/view?usp=drive_link",
@@ -1056,8 +1056,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Family Tools",
     "Name": "Move-in Checklist",
     "Website": "https://drive.google.com/file/d/1llW4lnsPryulSGKhiW6_xuKfcCPCe-8H/view?usp=drive_link",
@@ -1067,8 +1067,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "2024 AAA Colorado Adult Medicaid Programs",
     "Website": "https://drive.google.com/file/d/1wt0eQ-WrU9AhUXl-FSDknpgNjHUYMjR3/view?usp=drive_link",
@@ -1078,8 +1078,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "2025 Medicaid - Social Security Income Limits",
     "Website": "https://drive.google.com/file/d/1FUX4sFJbIgXH7shNrRNh1akD20qMmdV-/view?usp=drive_link",
@@ -1089,8 +1089,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "2025 Medicaid Pending List",
     "Website": "https://drive.google.com/file/d/1C4Swa14RaUsgRvnNZr-tZSWNO0UI_Shw/view?usp=sharing",
@@ -1100,8 +1100,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Assisted Living - Medicaid Community list",
     "Website": "https://drive.google.com/file/d/1yb6LQjrYr2g3hXMAlMv8RN0N1QY8P_tS/view?usp=drive_link",
@@ -1111,8 +1111,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Home Care - Medicaid List",
     "Website": "https://drive.google.com/file/d/1sttdj6hKVOjIC_9dV7KC7nbFoOYUgcPv/view?usp=sharing",
@@ -1122,8 +1122,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Income Based Housing - Seniors 2025\r",
     "Website": "https://drive.google.com/file/d/1_NsBXxZqzhnezskSrIAn-aZ6r2YO_rXw/view?usp=drive_link",
@@ -1133,8 +1133,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Income Trust Application",
     "Website": "https://drive.google.com/file/d/1NWfZefcbgrLk9v3ah_036Wdr_JCyHIXN/view?usp=drive_link",
@@ -1144,8 +1144,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Instructions for Completing the Income Trust Form",
     "Website": "https://drive.google.com/file/d/1Tqd5OwC9_x1SBWkPNTLjZ9V0D5qLC8YG/view?usp=drive_link",
@@ -1155,8 +1155,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "LTC Medicaid Application",
     "Website": "https://drive.google.com/file/d/187hit7OET1BEYejH-ltZfqZmGGP8Mdy6/view?usp=drive_link",
@@ -1166,8 +1166,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Medicaid One Pager Application",
     "Website": "https://drive.google.com/file/d/19eSfo4CAGHL-LafVcRb2kQ10w0W9C58W/view?usp=drive_link",
@@ -1177,8 +1177,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Nursing Home List / Medicaid Long Term Care",
     "Website": "https://drive.google.com/file/d/132JpSIaIiBrfnuvvhtVq0PxTjEI-G9Ld/view?usp=sharing",
@@ -1188,8 +1188,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "Low Income Documents",
     "Name": "Medicaid Application Instructions",
     "Website": "https://docs.google.com/document/d/1DfTigUZBvnwVXcctxprnxSrRicpv6C1G9oZ0z7ZH4f8/edit?usp=drive_link",
@@ -1199,8 +1199,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "VA Resources",
     "Name": "VA Nursing Homes State & Federal",
     "Website": "https://drive.google.com/file/d/1cj4x4PedhK4YcT9k-LnGnSnO45JV1F24/view?usp=drive_link",
@@ -1210,8 +1210,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "VA Resources",
     "Name": "Links to VA Resources",
     "Website": "https://drive.google.com/file/d/1d_aFn5JI10ulhklgxPqKobSGdIod_kYx/view?usp=drive_link",
@@ -1221,8 +1221,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "VA Resources",
     "Name": "CCNH Homes ECHS",
     "Website": "https://drive.google.com/file/d/1QRgaFev9bv6vEOKNhUpT_QO7ijluqqgL/view?usp=drive_link",
@@ -1232,8 +1232,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "VA Resources",
     "Name": "Application DD 214 Military Service Record",
     "Website": "https://drive.google.com/file/d/1fUpnbA-io-rM4EXuuWkBThSiXONKRrxF/view?usp=drive_link",
@@ -1243,8 +1243,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Form",
+    "Home Page": true,
+    "Type": "Form",
     "Category": "VA Resources",
     "Name": "2025 VA - Aid and Attendance Flyer",
     "Website": "https://drive.google.com/file/d/1EHRiqbBlYlydKp-Rxc2MAYTu1swkzYkC/view?usp=drive_link",
@@ -1254,8 +1254,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Document",
+    "Home Page": true,
+    "Type": "Document",
     "Category": "Disclosures",
     "Name": "General Disclosure",
     "Website": "https://fs11.formsite.com/5LkyVC/sjuyzngbeg/index",
@@ -1265,8 +1265,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Document",
+    "Home Page": true,
+    "Type": "Document",
     "Category": "Disclosures",
     "Name": "James Disclosure",
     "Website": "https://fs11.formsite.com/5LkyVC/iyvtmjabzy/index",
@@ -1276,8 +1276,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Document",
+    "Home Page": true,
+    "Type": "Document",
     "Category": "Disclosures",
     "Name": "Laura Disclosure",
     "Website": "https://fs11.formsite.com/5LkyVC/7nsowaf7rp/index",
@@ -1287,8 +1287,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Document",
+    "Home Page": true,
+    "Type": "Document",
     "Category": "Disclosures",
     "Name": "Rami Disclosure",
     "Website": "https://fs11.formsite.com/5LkyVC/admx42e1ut/index",
@@ -1298,8 +1298,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": true,
-    "Type *required*": "Document",
+    "Home Page": true,
+    "Type": "Document",
     "Category": "Disclosures",
     "Name": "Printable Disclosure",
     "Website": "https://drive.google.com/file/d/1xD2xDR2aPBLL2Kg2rBGdNnzZcaQBZKHf/view?usp=sharing",
@@ -1309,8 +1309,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Other Senior Resources",
     "Name": "Pikes Peak Elder Justice Referral process",
     "Website": "https://www.pikespeakelderjusticecenter.org/ppejcintakeform",
@@ -1320,8 +1320,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Other Senior Resources",
     "Name": "Pikes Peak Elder Justice qualifications",
     "Website": "https://drive.google.com/file/d/1RPfjvTIZaymRj5obnI75bALQgwkhjqo-/view?usp=sharing",
@@ -1331,8 +1331,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "Other Senior Resources",
     "Name": "Pikes Peak Area Agency on Aging SHIP office",
     "Website": "https://ppacg.org/pikes-peak-area-agency-on-aging/senior-insurance/",
@@ -1342,8 +1342,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "GUIDE Resources",
     "Name": "CMS Website for GUIDE information",
     "Website": "https://www.cms.gov/priorities/innovation/innovation-models/guide",
@@ -1353,8 +1353,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "GUIDE Resources",
     "Name": "CarePatrol's GUIDE page",
     "Website": "https://carepatrol.com/colorado-springs-pueblo/lp/free-dementia-caregiver-resources-in-colorado-springs-pueblo-guide-program/",
@@ -1364,8 +1364,8 @@
     "Notes": null
   },
   {
-    "Home Page *required*": false,
-    "Type *required*": "Resource",
+    "Home Page": false,
+    "Type": "Resource",
     "Category": "GUIDE Resources",
     "Name": "CarePatrol's GUIDE eBook",
     "Website": "https://drive.google.com/file/d/1TUCpBvuNRIgW9JD9AoItxK9gVSGqwFIl/view?usp=sharing",
