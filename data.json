@@ -8,7 +8,7 @@
     "Phone": "(719) 259-1331",
     "Description": "Offers day programming and respite care for seniors with supervision needs.",
     "Address": "16601 Jackson Creek Pkwy",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -19,7 +19,7 @@
     "Phone": "(719) 375-8121",
     "Description": "Provides a home-like setting with social activities and medical supervision.",
     "Address": "3730 Astrozon Blvd, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -30,7 +30,7 @@
     "Phone": "(719) 985-1157",
     "Description": "Adult day program affiliated with Memorial Hospital.",
     "Address": "2130 Academy Circle, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -41,18 +41,18 @@
     "Phone": "(719) 785-9295",
     "Description": "Activities, meals, and supervision for seniors in a secure environment.",
     "Address": "421 Windchime Pl, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
     "Type *required*": "Resource",
     "Category": "Bridge Loans",
-    "Name": "Second Act Financial Services",
+    "Name": "Second Act Finullcial Services",
     "Website": "https://secondact.com",
     "Phone": "(888) 999-7372",
     "Description": "Provides short-term bridge loans to help seniors afford care while waiting for other funding.",
     "Address": "Nationwide",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -63,7 +63,7 @@
     "Phone": "(719) 255-8002",
     "Description": "Counseling, support groups, and caregiver education through UCCS.",
     "Address": "4863 N. Nevada Ave, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -74,7 +74,7 @@
     "Phone": "24/7 Helpline: (800) 272-3900",
     "Description": "Education, support groups, and resources for families navigating Alzheimer\u2019s or dementia.",
     "Address": "Colorado Chapter - Statewide",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -85,7 +85,7 @@
     "Phone": "(303) 830-1839",
     "Description": "Offers education and caregiver support for families navigating Parkinson\u2019s.",
     "Address": "Statewide, serves COS area",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -96,7 +96,7 @@
     "Phone": "(719) 331-3640",
     "Description": "Provides Caregiver support tailored to each families situation and circumstances. Training as well as connection to supports and services to equip families. ",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -107,7 +107,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -118,7 +118,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -129,7 +129,7 @@
     "Phone": null,
     "Description": "How are you going to pay for that? Beneficent led session on how to pay for long term care",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -140,7 +140,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -151,7 +151,7 @@
     "Phone": "(719) 960-2084",
     "Description": "Mental health services and grief counseling with senior-friendly care.",
     "Address": "4291 Austin Bluffs Pkwy, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -162,7 +162,7 @@
     "Phone": "(719 416-4396",
     "Description": "Wide range of Mental Health services statewide. Veteran owned. Some gerontolgy specialists. No Medicaid. ",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -173,7 +173,7 @@
     "Phone": "(719) 884-2300",
     "Description": "Offers Hospital Beds (for sale) ranging from $250-$600\nWheelchairs $65 Thrift Store (719) 884-2366",
     "Address": "1625 S Murray Blvd, Colorado Springs, CO 80916",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -184,7 +184,7 @@
     "Phone": "(719) 442-1772",
     "Description": "$200/month to rent hospital bed",
     "Address": "2232 N Wahsatch Ave, Colorado Springs, CO 80907",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -195,7 +195,7 @@
     "Phone": "(719) 632-4036",
     "Description": "Medical Equipment- Wheelchairs etc..",
     "Address": "1833 N Circle Dr, Colorado Springs, CO 80909",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -206,7 +206,7 @@
     "Phone": "(719) 203-4396",
     "Description": "Mobility scooters, power chairs, beds, lift chairs etc.",
     "Address": "4756 N Chestnut St, Colorado Springs, CO 80907",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -217,7 +217,7 @@
     "Phone": "(719) 431-4302",
     "Description": null,
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -228,7 +228,7 @@
     "Phone": "(719) 653-5610",
     "Description": null,
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -239,7 +239,7 @@
     "Phone": "(719) 465-4324",
     "Description": "Elder law, estate planning, and Medicaid qualification assistance.",
     "Address": "1155 Kelly Johnson Blvd, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -250,7 +250,7 @@
     "Phone": "(719) 387-9852",
     "Description": "Estate planning attorneys experienced in guardianship and elder law.",
     "Address": "102 S Tejon St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -261,7 +261,7 @@
     "Phone": "(719) 473-6654",
     "Description": "Medicaid planning, probate, and estate legal services for seniors.",
     "Address": "902 S Weber St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -272,7 +272,7 @@
     "Phone": "(719) 759-7784",
     "Description": "Estate and asset protection planning tailored for seniors and families.",
     "Address": "2955 Professional Pl, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -283,7 +283,7 @@
     "Phone": "(719) 322-3661",
     "Description": "Estate planning and Probate Attorneys",
     "Address": "430 Beacon Lite Road, Suite 105 Monument, CO 80132",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -294,7 +294,7 @@
     "Phone": "(719) 208-7969",
     "Description": "Estate sales, downsizing, and relocation services for seniors.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -305,7 +305,7 @@
     "Phone": "(719) 428-9271",
     "Description": "Goodwill-affiliated estate services and home cleanouts.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -316,18 +316,18 @@
     "Phone": " (719) 231-5425",
     "Description": "Senior-focused organizing and relocation",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
     "Type *required*": "Resource",
-    "Category": "Financial ",
+    "Category": "Finullcial ",
     "Name": "Beneficent",
     "Website": "https://www.doinggoodforothers.com/",
     "Phone": "(719) 645-8350",
     "Description": "Helping clients understand, prepare, and qualify for programs covering high costs of Long-term Care",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -338,7 +338,7 @@
     "Phone": "(888)360-2678",
     "Description": null,
     "Address": "1645 Paonia St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -349,7 +349,7 @@
     "Phone": "(719) 638-0000",
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -360,7 +360,7 @@
     "Phone": "(719) 520-0711",
     "Description": "Professional guardianship and care coordination services.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -371,7 +371,7 @@
     "Phone": null,
     "Description": "State of CO instructions / manual",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -382,7 +382,7 @@
     "Phone": null,
     "Description": "State of CO website ",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -393,7 +393,7 @@
     "Phone": "719-359-8371",
     "Description": "In home care, respite, specialized home suppoort, recovery care, companion sitters, elder care management",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -404,7 +404,7 @@
     "Phone": "719-627-4410",
     "Description": "In home care, companionship, exercise, transportation, 24-hour care, respite, personal care, hospital recovery",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -415,7 +415,7 @@
     "Phone": "719-204-3604",
     "Description": "Porchlight Friends is a nonprofit organization that was born out of the needs of three groups: older adults wanting to remain independent at home, families that struggle to support them, and people looking for ways to connect with and support their communities. Porchlight Friends tackles all three of those components by utilizing community volunteers to support the needs of the older population and their family members.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -426,7 +426,7 @@
     "Phone": "(719)-204-6356",
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -437,7 +437,7 @@
     "Phone": "(719) 203-5848",
     "Description": "In home care serving El Paso and Teller Counties. From personal assistance with bathing and dressing, to companion care to fight isolation and loneliness, to support with housekeeping, errand and transportation services, sometimes just a little extra help can make all the difference.",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -448,7 +448,7 @@
     "Phone": "(719) 900-8257",
     "Description": null,
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -459,7 +459,7 @@
     "Phone": "(719) 387-0675",
     "Description": "Installs stairlifts, ramps, and home safety modifications.",
     "Address": "4472 Barnes Rd, Colorado Springs, CO 80917",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -470,7 +470,7 @@
     "Phone": "(719) 204-5008",
     "Description": "Local home accessibility solutions including grab bars and bathroom remodels.",
     "Address": "6385 Corporate Dr Suite 201, Colorado Springs, CO 80919",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -481,7 +481,7 @@
     "Phone": "(719) 291-3406 ",
     "Description": "Faith-based transitional housing for women facing homelessness.",
     "Address": "1504 N Hancock Ave, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -492,7 +492,7 @@
     "Phone": "(719) 473-5557",
     "Description": "Coordinates housing and substance use recovery for vulnerable individuals.",
     "Address": "2010 E Bijou St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -503,7 +503,7 @@
     "Phone": "(719) 577-7417",
     "Description": "Connects veterans and families to housing, employment, and health services.",
     "Address": "1120 N Circle Dr, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -514,7 +514,7 @@
     "Phone": "(719) 635-5078",
     "Description": "Emergency overnight shelter for adults; run by Springs Rescue Mission.",
     "Address": "25 W Las Vegas St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -525,7 +525,7 @@
     "Phone": "(719) 578-9190",
     "Description": "Provides shelter and transitional housing for men in recovery or transition.",
     "Address": "201 S. Weber St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -536,7 +536,7 @@
     "Phone": "(719) 632-1822",
     "Description": "Year-round emergency shelter, meals, and supportive housing programs.",
     "Address": "5 W Las Vegas St, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -547,7 +547,7 @@
     "Phone": "(850) 238-6371",
     "Description": "Local housecleaner- usually does move out services",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -558,7 +558,7 @@
     "Phone": "(719) 225-2165",
     "Description": "Professional cleaning services with recurring or one-time options.",
     "Address": "3320 N Academy Blvd, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -569,7 +569,7 @@
     "Phone": "719-649-1882",
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -580,7 +580,7 @@
     "Phone": "719-290-4956",
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -591,7 +591,7 @@
     "Phone": "(303) 237-5538",
     "Description": "David & Kelly Jennings,Fax: 303-993-8568",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -602,7 +602,7 @@
     "Phone": "(719) 930-3602",
     "Description": "Specializes in senior nail care and foot hygiene, mobile appointments only.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -613,7 +613,7 @@
     "Phone": "(720) 231-0721",
     "Description": "Mobile wound care and in-home medical services.",
     "Address": "Colorado-based",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -624,7 +624,7 @@
     "Phone": "(719) 200-2551",
     "Description": "Provides advanced wound care services and general medical care.",
     "Address": "2960 N Circle Dr, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -635,7 +635,7 @@
     "Phone": "(719)966-1310",
     "Description": "Maher Rehab provides expert wound care with individualized plans, using advanced techniques like amnio grafts, and thorough assessments.. Accepts Medicare Part B, TriCare and Railroad Medicare. ",
     "Address": "1880 Office Club Point, Suite 100 & 140 Colorado Springs, CO 80920",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -646,7 +646,7 @@
     "Phone": "719-922-1002",
     "Description": "Mend Wound Care offers a range of services, from wound dressings and debridement to compression therapy and bio-engineered skin substitutes.",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -657,7 +657,7 @@
     "Phone": "(719)645-6396",
     "Description": "Move Management with a focus on Seniors. Will model new spaces after their previous home to give a feeling of familiarity.",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -668,18 +668,18 @@
     "Phone": "(719) 499-6285",
     "Description": "Local, full-service moving company specializing in senior transitions.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
     "Type *required*": "Resource",
     "Category": "Movers Only",
     "Name": "Two Men and a Truck",
-    "Website": "https://twomenandatruck.com/local-movers/co/colorado-springs",
+    "Website": "https://twomenulldatruck.com/local-movers/co/colorado-springs",
     "Phone": "(719) 419-8491",
     "Description": "National moving company with senior move services and packing help.",
     "Address": "3220 Fillmore Ridge Heights",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -690,7 +690,7 @@
     "Phone": "(719) 459-0300",
     "Description": "She can come to you within 24-48 hrs. Prices vary from $45-$100. She has POA forms.\nSenior must have current ID",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -699,9 +699,9 @@
     "Name": "Monica Ouphasakda",
     "Website": null,
     "Phone": "(719) 484-9444",
-    "Description": " Mobile Notary with very low fees, only $20 per stamp, depending on location/mileage might be an additional $10. Carried financial POA and MDPOA and other general notary forms. MDPOA not required to be notarized in Colorado but she carries them anyway. ",
+    "Description": " Mobile Notary with very low fees, only $20 per stamp, depending on location/mileage might be an additional $10. Carried finullcial POA and MDPOA and other general notary forms. MDPOA not required to be notarized in Colorado but she carries them anyway. ",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -712,7 +712,7 @@
     "Phone": "(719) 210-3259",
     "Description": "She handles intake for the PACE program",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -723,7 +723,7 @@
     "Phone": "(719) 314-2327",
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -734,7 +734,7 @@
     "Phone": "(720) 923-1300",
     "Description": "Palliative care services and chronic condition support for seniors.",
     "Address": "Serves Colorado Springs",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -745,7 +745,7 @@
     "Phone": "(719) 633-3400",
     "Description": "Hospice, inpatient Hospice, and palliative care. ",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -756,7 +756,7 @@
     "Phone": "(833) 380-9583",
     "Description": "Call main line for referral to Hospice or Home Health or visit https://www.compassus.com/referral/",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -767,7 +767,7 @@
     "Phone": "(719) 548-5052",
     "Description": "In-home private duty nursing, therapies, and skilled care for all ages.",
     "Address": "1150 Elkton Dr, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -778,7 +778,7 @@
     "Phone": "(719) 219-0691",
     "Description": "Offers skilled nursing and caregiving support in the home.",
     "Address": "1910 Vindicator Dr, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -789,7 +789,7 @@
     "Phone": "(765) 650-6946",
     "Description": "Personalized private duty nursing with a focus on compassion and dignity.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -800,7 +800,7 @@
     "Phone": "(719) 322-3739",
     "Description": "Senior-friendly realtor helping families with downsizing and transitions.",
     "Address": "Based in Colorado Springs",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -811,7 +811,7 @@
     "Phone": "(719) 233-2489",
     "Description": "Local realtor with experience supporting aging clients and caregivers.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -822,7 +822,7 @@
     "Phone": "(719) 362-8000",
     "Description": "Wheelchair and ambulatory transport services within Colorado.",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -833,7 +833,7 @@
     "Phone": "719-675-0058",
     "Description": "Non-emergency medical transportation specializing in senior riders.",
     "Address": "Based in COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -844,7 +844,7 @@
     "Phone": "(719) 633-4677",
     "Description": "Affordable transport for older adults and individuals with disabilities.",
     "Address": "El Paso County",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -855,7 +855,7 @@
     "Phone": "719-675-0058",
     "Description": "Emergency Transport",
     "Address": "Colorado Springs, CO",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -866,7 +866,7 @@
     "Phone": "(719) 597-1277",
     "Description": "Non-emergency and long-distance medical transport provider.",
     "Address": "2370 N Powers Blvd, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -877,7 +877,7 @@
     "Phone": "(941) 685-6321",
     "Description": "Long-distance medical air and ground transport services.",
     "Address": "Nationwide",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -888,7 +888,7 @@
     "Phone": "(800) 550-1025",
     "Description": "Long-distance patient transport with bedside-to-bedside service.",
     "Address": "Nationwide",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -899,7 +899,7 @@
     "Phone": "(877) 286-0402",
     "Description": "VA Aid and Attendance and Disability claims, Free consultation - fee to process, ",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -910,7 +910,7 @@
     "Phone": "(720) 689-8903 ",
     "Description": "Elder Law attorney who specializes in VA benefits (NOT A&A but DIC/SCD etc)",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -921,7 +921,7 @@
     "Phone": "(719) 621-9111 ",
     "Description": "Provides VA-contracted in-home support and personal care services.",
     "Address": "1216 W Colorado Ave, COS",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -932,7 +932,7 @@
     "Phone": "303-946-2696",
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -943,7 +943,7 @@
     "Phone": "(719) 247-2532",
     "Description": "Provides transitional care for patients between appointments. Does not seek to replace the PCP. Can support urgent PPOCs",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -954,7 +954,7 @@
     "Phone": "(720) 923-1300",
     "Description": "Palliative care services and chronic condition support for seniors. Can support urgent PPOCs",
     "Address": "Serves Colorado Springs",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -965,7 +965,7 @@
     "Phone": "(719) 265-6931",
     "Description": null,
     "Address": "910 Pinon Ranch View Suite 211, Colorado Springs, CO 80907",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -976,7 +976,7 @@
     "Phone": "(719) 227-8624",
     "Description": null,
     "Address": "1275 Lake Plaza Dr Suite 100, Colorado Springs, CO 80906",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -987,7 +987,7 @@
     "Phone": "(719) 531-9585",
     "Description": "Provides skilled nursing, physical therapy, speech therapy, OT, Medical social work, and other in-home health services.",
     "Address": "5225 N Academy Blvd #106, Colorado Springs, CO 80918",
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -998,7 +998,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1009,7 +1009,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1020,7 +1020,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1031,7 +1031,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1042,7 +1042,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1053,7 +1053,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1064,7 +1064,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1075,7 +1075,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1086,7 +1086,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1097,7 +1097,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1108,7 +1108,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1119,7 +1119,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1130,7 +1130,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1141,7 +1141,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1152,7 +1152,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1163,7 +1163,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1174,7 +1174,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1185,7 +1185,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1196,7 +1196,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1207,7 +1207,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1218,7 +1218,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1229,7 +1229,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1240,7 +1240,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1251,7 +1251,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1262,7 +1262,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1273,7 +1273,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1284,7 +1284,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1295,7 +1295,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": true,
@@ -1306,7 +1306,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1317,7 +1317,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1328,7 +1328,7 @@
     "Phone": null,
     "Description": null,
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1339,7 +1339,7 @@
     "Phone": "(719) 471-2096 ",
     "Description": "The Pikes Peak Area Agency on Aging\u2019s Senior Insurance Assistance (SHIP) serves as an unbiased advocate to help you navigate Medicare, Medicaid, and long-term care without selling or endorsing any insurance products. Because new 2025 regulations cap out-of-pocket prescription costs at $2,000, it is vital to have our counselors review your plan to ensure your specific drugs remain covered. We serve El Paso, Park, Teller, and surrounding counties with personalized guidance to help you understand your benefits and select the best coverage. To schedule an appointment or speak to a counselor, please call (719) 471-2096 or toll-free at 1 (888) 696-7213.",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1350,7 +1350,7 @@
     "Phone": null,
     "Description": "This is the Centers for Medicare and Medicaid Services page dedicated to GUIDE programs and providers",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1361,7 +1361,7 @@
     "Phone": null,
     "Description": "Visit CarePatrols Landing page for information on how we're supporting clients interested in accessing GUIDE Benefits. ",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   },
   {
     "Home Page *required*": false,
@@ -1372,6 +1372,6 @@
     "Phone": null,
     "Description": "Download our GUIDE eBook for some great in depth information on eligibility, benefits, and some frequently asked questions.",
     "Address": null,
-    "Notes": NaN
+    "Notes": null
   }
 ]
