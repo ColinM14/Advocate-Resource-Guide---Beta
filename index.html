@@ -288,8 +288,9 @@ All:
       padding: 8px 12px;
       border-radius: 4px;
       cursor: pointer;
-      margin-bottom: 8px;
-      margin-top: 10px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: 10px;
       width: fit-content;
     }
     .document-checkbox-label input {
@@ -554,18 +555,22 @@ function createDocumentCard(resource, idx) {
   const hasNotes = resource.Notes && resource.Notes.trim() && resource.Notes !== "null";
   // Use a unique ID for each checkbox (for event binding)
   const checkboxId = `doc-check-${resource.Category.replace(/\s+/g, '')}-${idx !== undefined ? idx : Math.floor(Math.random()*1000000)}`;
-  card.innerHTML = `
+ card.innerHTML = `
+  <h3>${escapeForAttr(resource.Name)}</h3>
+  ${hasDescription ? `<div><strong>Description:</strong> ${escapeForAttr(resource.Description)}</div>` : ""}
+  <div class="button-row">
+    <button class="action-btn visit-document-button" onclick="window.open('${escapeForAttr(resource.Website)}', '_blank')">Visit Document</button>
     <label class="document-checkbox-label" for="${checkboxId}">
-      <input type="checkbox" class="doc-checkbox" id="${checkboxId}" data-title="${encodeURIComponent(resource.Name)}" data-link="${encodeURIComponent(resource.Website||"")}" data-description="${encodeURIComponent(resource.Description||"")}">
+      <input type="checkbox" class="doc-checkbox" id="${checkboxId}"
+        data-title="${encodeURIComponent(resource.Name)}"
+        data-link="${encodeURIComponent(resource.Website||"")}"
+        data-description="${encodeURIComponent(resource.Description||"")}"
+      >
       Select
     </label>
-    <h3>${resource.Name}</h3>
-    ${hasDescription ? `<div><strong>Description:</strong> ${resource.Description}</div>` : ""}
-    <div class="button-row">
-      <button class="action-btn visit-document-button" onclick="window.open('${resource.Website}', '_blank')">Visit Document</button>
-    </div>
-    ${hasNotes ? `<div class="notes-block"><strong>Notes:</strong> ${resource.Notes}</div>` : ""}
-  `;
+  </div>
+  ${hasNotes ? `<div class="notes-block"><strong>Notes:</strong> ${escapeForAttr(resource.Notes)}</div>` : ""}
+`;
   // Checkbox event: handle show/hide of bulk footer
   setTimeout(() => {
     const checkbox = card.querySelector('.doc-checkbox');
