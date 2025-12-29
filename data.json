@@ -1331,7 +1331,7 @@
     "Notes": null
   },
   {
-    "Home Page": false,
+    "Home Page": true,
     "Type": "Resource",
     "Category": "GUIDE Resources",
     "Name": "CMS Website for GUIDE",
@@ -1342,7 +1342,7 @@
     "Notes": null
   },
   {
-    "Home Page": false,
+    "Home Page": true,
     "Type": "Resource",
     "Category": "GUIDE Resources",
     "Name": "CarePatrols GUIDE page",
@@ -1353,7 +1353,7 @@
     "Notes": null
   },
   {
-    "Home Page": false,
+    "Home Page": true,
     "Type": "Resource",
     "Category": "GUIDE Resources",
     "Name": "CarePatrols GUIDE eBook",
